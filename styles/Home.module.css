@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato&family=Poppins:ital,wght@1,300&family=Shizuru&display=swap');
+
+.mainContent {
+  --dark-bg: #262626;
+  --gray-1: #BCB4B4;
+  --deep-dark: #1E1E1E;
+  --gray-2: #363636;
+  --white : white;
+  --black: black;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid #888888;
+  justify-content: center;
+  align-items: center;
+  background-color: #888888;
+  color: #fff;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.title a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  margin: 4rem 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.code {
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+
+.card {
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 300px;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.logo {
+  height: 1em;
+  margin-left: 0.5rem;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoName {
+  color: #fff;
+  margin-left: 5px;
+  font-size: 20px;
+}
+
+.navbar {
+  object-fit: 100%;
+  width: 100vw;
+  z-index: 2;
+  position: fixed;
+  max-width: 1200px;
+  display: flex;
+  padding-top: 40px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  left: 8.3%;
+}
+
+.navlink {
+  color: #949494;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  border-bottom: 1px solid transparent;
+}
+
+.navlink:hover {
+  color: #0AC593;
+  border-bottom: 1px solid #0AC593;
+}
+
+.navlink:not(:first-of-type) {
+  margin-left: 60px;
+}
+
+.connectWalletBtn {
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+  border: 2px solid #888;
+  transition: all 0.5s ease-in-out;
+}
+
+.connectWalletBtn:hover {
+  background: #3AD3CD;
+}
+
+.headerCaption {
+  padding: 180px 0px 0px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.caption {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.secondCaption {
+  font-size: 20px;
+  color: #949494;
+}
+
+.secondCaptionContainer {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.captionSpan {
+  color: #fff;
+}
+
+.caption:nth-last-of-type(0) {
+  margin-top: 20px;
+}
+
+.discoverBtn {
+  background-color: #f8e968;
+  color: #000000;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  border: 2px solid #888;
+}
+
+.discoverBtn:hover {
+  background: #3AD3CD;
+}
+
+.headerImages {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+.wrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background: #fe9c8f;
+}
+
+.wrapper:nth-of-type(2) {
+  margin-top: 40px;
+}
+
+.wrapper span {
+  position: absolute;
+}
+
+.wrapper span:first-child {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(10deg);
+  background: #feb2a8;
+  width: 100%;
+  height: 100%;
+  transition: all .5s ease-in-out;
+}
+
+.wrapper:hover span:first-child {
+  transform: translate(-50%, -50%) rotate(-10deg);
+}
+
+.wrapper span:nth-child(2) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 83%;
+  height: 83%;
+  background: transparent;
+  border: 2px solid #fec8c1;
+  transition: all .5s ease-in-out;
+}
+
+.wrapper:hover span:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(-45deg); 
+}
+
+.wrapper .videoBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+}
+
+.wrapper .videoBox video {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: 100%;
+  border-radius: 5px;
+}
+
+#aboutPage {
+  background: url('../public/images/black-bg-5.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+}
+
+.aboutContainer {
+  margin: 19px auto 0px;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  line-height: 1.5;
+}
+
+.aboutVideo {
+  width: 250px;
+  border: 2px solid #888;
+  margin-bottom: 10px;
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+}
+
+.imgContainer img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.imgCard:nth-of-type(1) {
+  padding-bottom: 180px;
+  margin-right: 30px;
+}
+
+.imgCard:nth-of-type(2) {
+  padding-top: 180px;
+  margin-left: 30px;
+}
+
+.imgAuthor {
+  margin-top: 10px;
+  display: flex;
+}
+
+.authorContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 10px;
+}
+
+.aboutCaptionContainer {
+  color: #fff;
+  width: 100%;
+  margin: 50px 0 0 100px;
+}
+
+.captionTitle {
+  font-size: 55px;
+  font-family: 'Shizuru', cursive;
+}
+
+.captionSubtitle {
+  font-size: 30px;
+}
+
+.captionBlockchain {
+  padding: 20px 0 10px 0;
+  font-size: 25px;
+}
+
+.captionDescription {
+  color: #949494;
+  padding: 20px 0;
+}
+
+#roadmap {
+  background-color: #537895;
+  background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+}
+
+.roadmapTitle {
+  font-size: 100px;
+  color: #fff;
+  text-align: center;
+}
+
+.heading3 {
+  padding-top: 0.25em;
+}
+
+.verticalTimelineElementContent {
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25), 0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
+  padding: 2em 3em !important;
+}
+
+.roadmapDate {
+  color: rgb(201, 251, 255);
+}
+
+#description {
+  margin: 1.5em 0 0 0;
+}
+
+.roadmapBtn {
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  color: white;
+}
+
+.workButton {
+  background-color: #06D6A0;
+}
+
+.workButton:hover {
+  background-color: #0AC593;
+}
+
+.schoolButton {
+  background-color: #F9C74F;
+}
+
+.schoolButton:hover {
+  background-color: #F3BC3C;
+}
+
+@media only screen and (max-width: 1700px) {
+  .vertical-timeline-element-date {
+    display: block !important;
+    float: none !important;
+    color: rgb(44, 44, 44);
+    margin-top: 1.5em;
+  }
+}
+
+.contact {
+  background-color: #2B2B2B;
+}
+
+.contactContainer {
+  padding: 50px 0;
+  margin: 0 auto;
+  max-width: 1200px;
+  color: #C3BDBC;
+}
+
+.contactTitle,
+.contactSubtitle {
+  text-align: center;
+}
+
+.contactTitle {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.contactSubtitle {
+  font-size: 60px;
+  font-weight: 900;
+}
+
+.contactForm {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  margin-top: 50px;
+}
+
+.contactInfoContainer {
+  width: 100%;
+}
+
+.contactInfoBox {
+  width: 100%;
+  background-color: #212121;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.contactInfoBox:not(:first-of-type) {
+  margin-top: 20px;
+}
+
+.contactIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #3D3D3D;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.verticalRule {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup:not(:first-of-type) {
+  margin-top: 15px;
+}
+
+.formGroup input {
+  margin-top: 10px;
+  background: #212121;
+  outline: none;
+  border: none;
+  padding: 15px 15px;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.formGroup textarea {
+  margin-top: 10px;
+  background: #212121;
+  outline: none;
+  border: none;
+  padding: 15px 15px;
+  color: #fff;
+  border-radius: 5px;
+  height: 200px;
+}
+
+.contactBtn {
+  padding: 10px 35px;
+  background: #979291;
+  color: #000000;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  margin-top: 15px;
+  transition: all 0.5s ease-in-out;
+}
+
+.contactBtn:hover {
+  background: #0AC593;
+  color:rgb(44, 44, 44);
+}
