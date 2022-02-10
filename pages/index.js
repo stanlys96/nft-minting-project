@@ -74,12 +74,6 @@ let timelineElements = [
 ];
 
 export default function Home() {
-  if (typeof window === 'object') {
-  // Check if document is finally loaded
-   document.addEventListener("DOMContentLoaded", function () {
-       alert('Finished loading')
-     });
-  }
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
