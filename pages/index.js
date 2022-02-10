@@ -148,8 +148,6 @@ export default function Home() {
             <p className={styles.captionDescription}>Escapes are a collection of 5,000 unique, programmatically generated NFTs with proof of ownership stored on the Ethereum blockchain. Each Escape is generated randomly from dozens of different assets.</p>
             <p className={styles.captionSubtitle}>Founder</p>
             <p className={styles.captionDescription}>Founder Escapes are numbered from #1 to #8000 and they carry special benefits for their owners. From time to time, Escapes will be raffled between Founders (those who own Founder Escapes). Each Founder Escape you have is a ticket for these raffles.</p>
-            <p className={styles.captionSubtitle}>Rare Apes</p>
-            <p className={styles.captionDescription}>There will be a total of 10 Rare Escapes generated throughout the project. All Rare Escapes are auctioned during a 7-day period to ensure everyone has a fair chance to own them.</p>
           </div>
         </div>
       </section>

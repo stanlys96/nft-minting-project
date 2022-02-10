@@ -137,7 +137,7 @@
   position: fixed;
   max-width: 1200px;
   display: flex;
-  padding-top: 40px;
+  padding-top: 10px;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
@@ -173,8 +173,11 @@
   background: #3AD3CD;
 }
 
+.header {
+  padding-top: 90px;
+}
+
 .headerCaption {
-  padding: 180px 0px 0px;
   max-width: 1200px;
   margin: 0 auto;
   color: #fff;
@@ -236,8 +239,8 @@
 
 .wrapper {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 250px; 
+  height: 250px;
   background: #fe9c8f;
 }
 
@@ -296,7 +299,7 @@
 }
 
 #aboutPage {
-  background-image: url('../public/images/black-bg-3.jpeg');
+  background-image: url('/images/black-bg-3.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
