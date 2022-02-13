@@ -131,17 +131,21 @@
 }
 
 .navbar {
-  object-fit: 100%;
+  /* object-fit: 100%; */
   width: 100vw;
   z-index: 2;
   position: fixed;
+  padding-top: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding-bottom: 10px;
+}
+
+.insideNavbar {
   max-width: 1200px;
   display: flex;
-  padding-top: 10px;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  left: 8.3%;
 }
 
 .navlink {

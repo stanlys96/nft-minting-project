@@ -9,37 +9,39 @@ function MyApp({ Component, pageProps }) {
     <>
       <video className="vid" src='/videos/video-1.mp4' autoPlay loop muted />
       <nav className={styles.navbar}>
-        <div className={styles.logoContainer}>
-          <Image src='/images/bored-ape.png' width={70} height={70} />
-          <Link to="home" onClick={() => {
-            router.push('/', undefined, { shallow: true });
-          }} href="/" className={styles.logoName}>escAPE</Link>
+        <div className={styles.insideNavbar}>
+          <div className={styles.logoContainer}>
+            <Image src='/images/bored-ape.png' width={40} height={40} />
+            <Link to="home" smooth={true} spy={true} onClick={() => {
+              router.push('/', undefined, { shallow: true });
+            }} href="/" className={styles.logoName}>escAPE</Link>
+          </div>
+          <div>
+            <Link onClick={() => {
+              router.push('/', undefined, { shallow: true });
+            }} to="home" smooth={true} spy={true}  href="/" className={styles.navlink}>
+            Home
+            </Link>
+            <Link onClick={() => {
+              router.push('/', undefined, { shallow: true });
+            }} to="about" smooth={true} spy={true} href="/" className={styles.navlink}>
+              About
+            </Link>
+            <Link onClick={() => {
+              router.push('/', undefined, { shallow: true });
+            }} to="roadmap" smooth={true} spy={true} href="/" className={styles.navlink}>
+              Roadmap
+            </Link>
+            <Link onClick={() => {
+              router.push('/', undefined, { shallow: true });
+            }} to="contact" smooth={true} spy={true} href="/" className={styles.navlink}>
+              Contact
+            </Link>
+          </div>
+          <Link onClick={() => {
+              router.push('/connect-metamask', undefined, { shallow: true });
+            }} to="connect-metamask" href="/connect-metamask" className={styles.connectWalletBtn}>CONNECT WALLET</Link>
         </div>
-        <div>
-          <Link onClick={() => {
-            router.push('/', undefined, { shallow: true });
-          }} to="home" smooth={true} spy={true}  href="/" className={styles.navlink}>
-          Home
-          </Link>
-          <Link onClick={() => {
-            router.push('/', undefined, { shallow: true });
-          }} to="about" smooth={true} spy={true} href="/" className={styles.navlink}>
-            About
-          </Link>
-          <Link onClick={() => {
-            router.push('/', undefined, { shallow: true });
-          }} to="roadmap" smooth={true} spy={true} href="/" className={styles.navlink}>
-            Roadmap
-          </Link>
-          <Link onClick={() => {
-            router.push('/', undefined, { shallow: true });
-          }} to="contact" smooth={true} spy={true} href="/" className={styles.navlink}>
-            Contact
-          </Link>
-        </div>
-        <Link onClick={() => {
-            router.push('/connect-metamask', undefined, { shallow: true });
-          }} to="connect-metamask" href="/connect-metamask" className={styles.connectWalletBtn}>CONNECT WALLET</Link>
       </nav>
       <Component {...pageProps} />
     </>
