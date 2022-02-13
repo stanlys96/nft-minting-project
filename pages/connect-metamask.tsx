@@ -145,7 +145,6 @@ export default function ConnectMetamask() {
       address,
       chainId: network.chainId,
     })
-    console.log(chainId, "<<<");
   }, [])
 
     const disconnect = useCallback(
@@ -175,18 +174,15 @@ export default function ConnectMetamask() {
     if (provider?.on) {
       const handleAccountsChanged = (accounts: string[]) => {
         // eslint-disable-next-line no-console
-        console.log('accountsChanged', accounts)
         dispatch({
           type: 'SET_ADDRESS',
           address: accounts[0],
         })
-        console.log(accounts[0], "????");
         setOriginalAddress(accounts[0]);
       }
 
       // https://docs.ethers.io/v5/concepts/best-practices/#best-practices--network-changes
       const handleChainChanged = (_hexChainId: string) => {
-        console.log(_hexChainId);
         window.location.reload()
       }
 
@@ -212,7 +208,6 @@ export default function ConnectMetamask() {
   }, [provider, disconnect])
 
   const chainData = getChainData(chainId)
-  console.log(chainData);
   useEffect(() => {
     if (chainData != null) {
       setChain(chainData.chain);
