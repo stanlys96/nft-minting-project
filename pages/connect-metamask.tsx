@@ -227,7 +227,7 @@ export default function ConnectMetamask() {
             <Image width={125} height={125} src='/images/bored-ape.png' alt="monkey" />
           </div>
         </div>
-        <a className={styles.connectMetamaskBtn} onClick={() => connect()}>Connect Metamask <FontAwesomeIcon icon={faArrowRight}/></a>
+        <a className={styles.connectMetamaskBtn} onClick={() => connect()}>Connect Metamask</a>
       </div>
     </div>
   );
@@ -260,7 +260,7 @@ export default function ConnectMetamask() {
             />
           </div>
           <p className={styles.mintTotalPrice}>Total Price: {(parseFloat(quantity == "" || quantity == null ? "0" : quantity) * 0.05).toFixed(quantity == "" || quantity == null ? 0 : 2)} ETH</p>
-          <a className={`${styles.connectMetamaskBtn}`} style={ quantity == null || quantity == "" ? { backgroundColor: "#E1E1E1" } : {}}>MINT <FontAwesomeIcon icon={faArrowRight}/></a>
+          <a className={`${styles.connectMetamaskBtn}`} style={ quantity == null || quantity == "" ? { backgroundColor: "#E1E1E1" } : {}}>MINT</a>
           <p className={styles.mintedSupply}>Minted escAPES: 0/8000</p>
         </div>
       </div>
@@ -274,7 +274,7 @@ export default function ConnectMetamask() {
             <Image width={125} height={125} src='/images/bored-ape.png' alt="monkey" />
           </div>
         </div>
-        <a className={styles.connectMetamaskBtn} onClick={() => connect()}>Wrong Chain <FontAwesomeIcon icon={faArrowRight}/></a>
+        <a className={styles.connectMetamaskBtn} onClick={() => connect()}>Wrong Chain</a>
       </div>
     </div>
     );
