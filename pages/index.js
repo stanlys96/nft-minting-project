@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSchool, faWarehouse, faRocket } from '@fortawesome/fontawesome-free-solid'
 import { ReactComponent as WorkIcon } from './svg/work.svg';
 import { ReactComponent as SchoolIcon } from './svg/school.svg';
+import { useRouter } from 'next/router'
 
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
@@ -74,6 +75,7 @@ let timelineElements = [
 ];
 
 export default function Home() {
+  const router = useRouter()
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -89,7 +91,9 @@ export default function Home() {
             <p className={styles.secondCaption}>A Unique And Innovative <span className={styles.captionSpan}>Collection</span> To Discover <span className={styles.captionSpan}>NFT</span></p>
             <p className={styles.secondCaption}><span className={styles.captionSpan}>Art</span> Starts Now And Discover NFTs</p>
           </div>
-          <a className={styles.discoverBtn}>MINT NOW</a>
+          <a className={styles.discoverBtn} onClick={() => {
+            router.push('/connect-metamask', undefined, { shallow: true });
+          }}>MINT NOW</a>
         </div>
         <div className={styles.headerImages}>
           <div className={styles.wrapper}>
