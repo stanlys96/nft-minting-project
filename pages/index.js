@@ -11,6 +11,7 @@ import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeli
 import "react-vertical-timeline-component/style.min.css";
 import { MdEmail, MdLocalPhone, MdLocationCity } from 'react-icons/md';
 import React, { useState } from "react";
+import Navbar from './navbar';
 
 let timelineElements = [
   {
@@ -82,7 +83,8 @@ export default function Home() {
   let workIconStyles = { background: "#06D6A0" };
   let schoolIconStyles = { background: "#F9C74F" };
   return (
-    <div className={styles.mainContent}>
+    <section>
+      <div className={styles.mainContent}>
       <section className={`${styles.header} home`}>
         <div className={styles.headerCaption}>
           <p className={styles.caption}>DISCOVER</p>
@@ -241,5 +243,6 @@ export default function Home() {
         <p>Copyright &copy; escAPE 2022</p>
       </footer>
     </div>
+    </section>
   )
 }

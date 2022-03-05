@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "pages/connect-metamask.js"  ],
   "exclude": [
     "node_modules"
   ]
