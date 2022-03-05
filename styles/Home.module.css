@@ -641,6 +641,7 @@
   font-size: 45px;
   color: #2E1146;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .mintSubtitle {
@@ -671,4 +672,86 @@
 
 .quantityOwned {
   font-weight: normal;
+}
+
+.mintingBtnContainer {
+  margin-bottom: 10px;
+}
+
+.mintingBtn {
+  position: relative;
+  padding: 10px 20px;
+  margin: 0 15px;
+  color: #21ebff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 20px;
+  transition: 0.5s;
+  overflow: hidden;
+  background-color: #888;
+  -webkit-box-reflect: below 1px linear-gradient(trasparent, #0003);
+}
+
+.mintingBtn:hover {
+  background: #21ebff;
+  color: #111;
+  box-shadow: 0 0 50px #21ebff;
+  transition-delay: 0.5s;
+}
+
+.mintingBtn:hover::before {
+  width: 98%;
+  height: 95%;
+  transition-delay: 0s;
+}
+
+.mintingBtn::before,
+.mintBtnClicked::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #21ebff;
+  border-left: 2px solid #21ebff;
+  transition: 0.5s;
+}
+
+.mintingBtn::after,
+.mintBtnClicked::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #21ebff;
+  border-right: 2px solid #21ebff;
+  transition: 0.5s;
+}
+
+.mintingBtn:hover::after {
+  width: 98%;
+  height: 95%;
+  transition-delay: 0s;
+}
+
+.mintBtnClicked {
+  position: relative;
+  padding: 10px 20px;
+  margin: 0 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 20px;
+  transition: 0.05s;
+  background: #21ebff;
+  color: #111;
+  box-shadow: 0 0 50px #21ebff;
+}
+
+.mintNone {
+
 }

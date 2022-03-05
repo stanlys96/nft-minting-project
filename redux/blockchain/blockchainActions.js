@@ -39,12 +39,53 @@ const resetAccountRequest = (payload) => {
   }
 }
 
+const updateBtnOne = (payload) => {
+  return {
+    type: "UPDATE_BTN_ONE",
+    payload: payload
+  }
+}
+
+const updateBtnTwo = (payload) => {
+  return {
+    type: "UPDATE_BTN_TWO",
+    payload: payload
+  }
+}
+
+const updateBtnThree = (payload) => {
+  return {
+    type: "UPDATE_BTN_THREE",
+    payload: payload
+  }
+}
+
+const updateAllBtn = (payload) => {
+  return {
+    type: "UPDATE_ALL_BTN",
+    payload: payload
+  }
+}
+
+const updateLoadingTrue = (payload) => {
+  return {
+    type: "UPDATE_LOADING_TRUE",
+    payload: payload
+  }
+}
+
+const updateLoadingFalse = (payload) => {
+  return {
+    type: "UPDATE_LOADING_FALSE",
+    payload: payload
+  }
+}
+
 export const connect = () => {
   return async (dispatch) => {
     dispatch(connectRequest());
     const { ethereum } = window;
     const metamaskIsInstalled = ethereum && ethereum.isMetaMask;
-    console.log(metamaskIsInstalled);
     if (metamaskIsInstalled) {
       Web3EthContract.setProvider(ethereum);
       let web3 = new Web3(ethereum);
@@ -60,7 +101,7 @@ export const connect = () => {
           console.log("AAAA");
           const SmartContractObj = new Web3EthContract(
             SmartContract,
-            "0x5E5Ebc62411D7bD32D90DE534616a2481DFcE86B"
+            "0x040A680Be077bF157e53cBaBD7EFB9208FC4C4E7"
           );
           dispatch(
             connectSuccess({
@@ -71,7 +112,7 @@ export const connect = () => {
           );
           // Add listeners start
           ethereum.on("accountsChanged", (accounts) => {
-            console.log(accounts[0], "<<<<");
+            dispatch(setLoadingTrue());
             if (accounts[0] == undefined) {
               dispatch(resetAccount());
               window.location.reload();
@@ -84,13 +125,13 @@ export const connect = () => {
           });
           // Add listeners end
         } else {
-          dispatch(connectFailed("Change network to Polygon."));
+          dispatch(connectFailed("Please change network to Polygon."));
         }
       } catch (err) {
         dispatch(connectFailed("Something went wrong."));
       }
     } else {
-      dispatch(connectFailed("Install Metamask."));
+      dispatch(connectFailed("Please install Metamask."));
     }
   };
 };
@@ -99,11 +140,53 @@ export const updateAccount = (account) => {
   return async (dispatch) => {
     dispatch(updateAccountRequest({ account: account }));
     dispatch(fetchData(account));
+    setTimeout(() => {
+      dispatch(setLoadingFalse());
+    }, 5000);
   };
 };
 
 export const resetAccount = () => {
   return async (dispatch) => {
     dispatch(resetAccountRequest({ account: null }));
+    setTimeout(() => {
+      dispatch(setLoadingFalse());
+    }, 5000);
+  }
+}
+
+export const updatingBtnOneAction = () => {
+  return async (dispatch) => {
+    dispatch(updateBtnOne());
+  }
+}
+
+export const updatingBtnTwoAction = () => {
+  return async (dispatch) => {
+    dispatch(updateBtnTwo());
+  }
+}
+
+export const updatingBtnThreeAction = () => {
+  return async (dispatch) => {
+    dispatch(updateBtnThree());
+  }
+}
+
+export const updatingAllBtnAction = () => {
+  return async (dispatch) => {
+    dispatch(updateAllBtn());
+  }
+}
+
+export const setLoadingTrue = () => {
+  return async (dispatch) => {
+    dispatch(updateLoadingTrue());
+  }
+}
+
+export const setLoadingFalse = () => {
+  return async (dispatch) => {
+    dispatch(updateLoadingFalse());
   }
 }

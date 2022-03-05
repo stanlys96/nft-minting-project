@@ -10,7 +10,7 @@ import WalletConnectProvider from '@walletconnect/web3-provider';
 import WalletLink from 'walletlink';
 import { ellipseAddress, getChainData } from '../lib/utilities';
 import { useDispatch, useSelector } from "react-redux";
-import { connect } from "../redux/blockchain/blockchainActions";
+import { connect, updatingBtnOneAction, updatingBtnTwoAction, updatingBtnThreeAction, updatingAllBtnAction } from "../redux/blockchain/blockchainActions";
 import { fetchData } from "../redux/data/dataActions";
 import { BounceLoader, BeatLoader } from 'react-spinners';
 import Swal from 'sweetalert2';
@@ -37,9 +37,11 @@ export default function ConnectMetamask() {
   const [quantityOwned, setQuantityOwned] = useState(0);
   const [chain, setChain] = useState("");
   const [account, setAccount] = useState();
+  const [btnOneClicked, setBtnOneClicked] = useState(false);
+  const [btnTwoClicked, setBtnTwoClicked] = useState(false);
+  const [btnThreeClicked, setBtnThreeClicked] = useState(false);
 
   const claimNFTs = async (_amount) => {
-    console.log(_amount, "<<<!");
     if (_amount <= 0) {
       return;
     }
@@ -64,7 +66,9 @@ export default function ConnectMetamask() {
           "WOW, you now own a Nerdy Coder Clone. go visit Opensea.io to view it."
         );
         dispatch(fetchData(blockchain.account));
-        setClaimingNft(false);
+        setTimeout(() => {
+          setClaimingNft(false);
+        }, 2000);
         Swal.fire({
           title: 'Success!',
           text: `You have successfully minted ${_amount} escAPES! Congratulations!`,
@@ -121,6 +125,7 @@ export default function ConnectMetamask() {
   useEffect(() => {
     getData();
   }, [blockchain.account]);
+  console.log(data.totalSupply, " <<<<<");
   if (connectingWallet) {
     return (
       <div className={styles.connectMetamask}>
@@ -132,12 +137,12 @@ export default function ConnectMetamask() {
       </div>
     );
   }
-  if (claimingNft) {
+  if (claimingNft || blockchain.userLoading) {
     return (
       <div className={styles.connectMetamask}>
         <div className={styles.connectContainer}>
           <BeatLoader />
-          <p style={{ margin: '10px 0' }}>Processing your transaction...</p>
+          <p style={{ margin: '10px 0' }}>{blockchain.userLoading ? "Changing account..." : "Processing your transaction..."}</p>
           <p>Please wait...</p>
         </div>
       </div>
@@ -152,7 +157,7 @@ export default function ConnectMetamask() {
             <Image width={125} height={125} src='/images/bored-ape.png' alt="monkey" />
           </div>
         </div>
-        <a className={styles.connectMetamaskBtn} onClick={() => connect()}>{blockchain.errorMsg}</a>
+        <p>{blockchain.errorMsg}</p>
       </div>
     </div>
     );
@@ -186,33 +191,38 @@ export default function ConnectMetamask() {
       <div className={styles.connectMetamask}>
         <div className={styles.mintContainer}>
           <p className={styles.mintTitle}>PUBLIC MINT</p>
-          <p className={styles.mintSubtitle}>Get an escAPE now!</p>
-          <p className={styles.mintCondition}>Max of 3 escAPES per transaction.</p>
+          <div>
+            {data.totalOwned < 3 && <p className={styles.mintSubtitle}>Get an escAPE now!</p>}
+            {data.totalOwned < 3 && <p className={styles.mintCondition}>Max of {data.totalOwned == 0 ? 3 : data.totalOwned == 1 ? 2 : data.totalOwned == 2 ? 1 : data.totalOwned > 2 ? 0 : 0} escAPES per transaction.</p>}
+          </div>
           <p className={styles.mintAddress}>Connected account: ..{blockchain.account.slice(32)}</p>
           <p className={styles.ownedSupply}>Number of escAPES you own: <span className={styles.quantityOwned}>{data.totalOwned}</span></p>
-          <div className={styles.quantityContainer}>
-            <div className={styles.innerContainer}>
-              <span>Quantity</span>
-            </div>
-            <input 
-              type="number"
-              id="quantity"
-              name="quantity"
-              value={quantity}
-              onKeyDown={ (evt) => evt.key === 'e' && evt.preventDefault() }
-              onChange={(e) => {
-                if (parseInt(e.target.value) > 3) {
-                  setQuantity(3);
-                } else {
-                  setQuantity(e.target.value)
-                }
-              }}
-            />
-          </div>
-          <p className={styles.mintTotalPrice}>Total Price: {(parseFloat(quantity == "" || quantity == null ? "0" : quantity) * 0.05).toFixed(quantity == "" || quantity == null ? 0 : 2)} ETH</p>
-          <a className={`${styles.connectMetamaskBtn}`} style={ quantity == null || quantity == "" ? { backgroundColor: "#E1E1E1" } : {}} onClick={() => {
-            claimNFTs(quantity);
-          }}>MINT</a>
+          {data.totalOwned < 3 && <div className={styles.mintingBtnContainer}>
+            {data.totalOwned < 3 && <a href="#" onClick={() => {
+              dispatch(updatingBtnOneAction());
+            }} className={`${blockchain.btnOneSelected ? styles.mintBtnClicked : styles.mintingBtn}`}>Mint 1</a>}
+            {data.totalOwned < 2 && <a href="#" onClick={() => {
+              dispatch(updatingBtnTwoAction());
+            }} className={`${blockchain.btnTwoSelected ? styles.mintBtnClicked : styles.mintingBtn}`}>Mint 2</a>}
+            {data.totalOwned < 1 && <a href="#" onClick={() => {
+              dispatch(updatingBtnThreeAction());
+            }}  className={`${blockchain.btnThreeSelected ? styles.mintBtnClicked : styles.mintingBtn}`}>Mint 3</a>}
+          </div>}
+          <p className={styles.mintTotalPrice}>Total Price: {blockchain.btnOneSelected ? "0.5" : blockchain.btnTwoSelected ? "1.0" : blockchain.btnThreeSelected ? "1.5" : "0.0"} ETH</p>
+          {data.totalOwned < 3 ? <a className={`${styles.connectMetamaskBtn}`} style={ blockchain.btnOneSelected || blockchain.btnTwoSelected || blockchain.btnThreeSelected ? {} : { backgroundColor: "#E1E1E1" }} onClick={() => {
+            let num = 0;
+            if (blockchain.btnOneSelected) {
+              num = 1;
+            } else if (blockchain.btnTwoSelected) {
+              num = 2;
+            } else if (blockchain.btnThreeSelected) {
+              num = 3;
+            } else {
+              return;
+            }
+            claimNFTs(num);
+            dispatch(updatingAllBtnAction());
+          }}>MINT</a> : <p>You have reached the maximum<br/>number allowed to mint! (3 NFTs)</p>}
           <p className={styles.mintedSupply}>Minted escAPES: {data.totalSupply}/8000</p>
         </div>
       </div>
@@ -222,14 +232,14 @@ export default function ConnectMetamask() {
       <div className={styles.connectMetamask}>
         <div className={styles.mintContainer}>
           <p className={styles.mintTitle}>PUBLIC MINT</p>
-          <p className={styles.mintSubtitle}>Get an escAPE now!</p>
-          <p className={styles.mintCondition}>You can only mint one while total minted<br/> escAPES are less than 500.</p>
+          {data.totalOwned < 1 && <p className={styles.mintSubtitle}>Get an escAPE now!</p>}
+          {data.totalOwned < 1 && <p className={styles.mintCondition}>You can only mint one while total minted<br/> escAPES are less than 500.</p>}
           <p className={styles.mintAddress}>Connected account: ..{blockchain.account.slice(32)}</p>
           <p className={styles.ownedSupply}>Number of escAPES you own: <span className={styles.quantityOwned}>{data.totalOwned}</span></p>
           <p className={styles.mintTotalPrice}>Total Price: FREE (excluding gas fees)</p>
-          <a className={`${styles.connectMetamaskBtn}`} onClick={() => {
+          {data.totalOwned < 1 ? <a className={`${styles.connectMetamaskBtn}`} onClick={() => {
             claimOneNft();
-          }}>MINT ONE</a>
+          }}>MINT ONE</a> : <div><p>You have reached the maximum<br/>number allowed to mint for supply before 500! (1 NFT)</p><p style={{ marginTop: '10px' }}>Please come back when total minted NFTs reach 500.</p></div>}
           <p className={styles.mintedSupply}>Minted escAPES: {data.totalSupply}/8000</p>
         </div>
       </div>

@@ -4,7 +4,11 @@ const initialState = {
   smartContract: null,
   web3: null,
   errorMsg: "",
-  totalOwned: 0
+  totalOwned: 0,
+  btnOneSelected: false,
+  btnTwoSelected: false,
+  btnThreeSelected: false,
+  userLoading: false
 };
 
 const blockchainReducer = (state = initialState, action) => {
@@ -27,6 +31,9 @@ const blockchainReducer = (state = initialState, action) => {
         ...initialState,
         loading: false,
         errorMsg: action.payload,
+        btnOneSelected: false,
+        btnTwoSelected: false,
+        btnThreeSelected: false,
       };
     case "UPDATE_ACCOUNT":
       return {
@@ -39,7 +46,49 @@ const blockchainReducer = (state = initialState, action) => {
         loading: false,
         account: null,
         errorMsg: "",
-        totalOwned: 0
+        totalOwned: 0,
+        smartContract: null,
+        btnOneSelected: false,
+        btnTwoSelected: false,
+        btnThreeSelected: false,
+      }
+    case "UPDATE_BTN_ONE":
+      return {
+        ...state,
+        btnOneSelected: true,
+        btnTwoSelected: false,
+        btnThreeSelected: false
+      }
+    case "UPDATE_BTN_TWO":
+      return {
+        ...state,
+        btnOneSelected: false,
+        btnTwoSelected: true,
+        btnThreeSelected: false
+      }
+    case "UPDATE_BTN_THREE":
+      return {
+        ...state,
+        btnOneSelected: false,
+        btnTwoSelected: false,
+        btnThreeSelected: true
+      }
+    case "UPDATE_ALL_BTN":
+      return {
+        ...state,
+        btnOneSelected: false,
+        btnTwoSelected: false,
+        btnThreeSelected: false
+      }
+    case "UPDATE_LOADING_TRUE":
+      return {
+        ...state,
+        userLoading: true
+      }
+    case "UPDATE_LOADING_FALSE":
+      return {
+        ...state,
+        userLoading: false
       }
     default:
       return state;

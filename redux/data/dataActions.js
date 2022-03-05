@@ -1,5 +1,6 @@
 // log
 import store from "../store";
+import { updatingBtnOneAction, updatingBtnTwoAction, updatingBtnThreeAction, updatingAllBtnAction } from '../blockchain/blockchainActions';
 
 const fetchDataRequest = () => {
   return {
@@ -45,6 +46,17 @@ export const fetchData = (account) => {
           totalOwned
         })
       );
+      console.log(totalOwned, "!!!!");
+      switch (totalOwned.toString()) {
+        case "0":
+          dispatch(updatingBtnThreeAction());
+        case "1":
+          dispatch(updatingBtnTwoAction());
+        case "2":
+          dispatch(updatingBtnOneAction());
+        default:
+          dispatch(updatingAllBtnAction());
+      }
     } catch (err) {
       console.log(err);
       dispatch(fetchDataFailed("Could not load data from contract."));
