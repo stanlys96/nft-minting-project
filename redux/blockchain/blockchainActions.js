@@ -71,7 +71,13 @@ export const connect = () => {
           );
           // Add listeners start
           ethereum.on("accountsChanged", (accounts) => {
-            dispatch(updateAccount(accounts[0]));
+            console.log(accounts[0], "<<<<");
+            if (accounts[0] == undefined) {
+              dispatch(resetAccount());
+              window.location.reload();
+            } else {
+              dispatch(updateAccount(accounts[0]));
+            }
           });
           ethereum.on("chainChanged", () => {
             window.location.reload();

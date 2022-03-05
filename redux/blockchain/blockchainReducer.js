@@ -38,7 +38,6 @@ const blockchainReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         account: null,
-        smartContract: null,
         errorMsg: "",
         totalOwned: 0
       }

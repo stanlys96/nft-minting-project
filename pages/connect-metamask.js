@@ -33,7 +33,7 @@ export default function ConnectMetamask() {
   const [feedback, setFeedback] = useState("Maybe it's your lucky day.");
   const [claimingNft, setClaimingNft] = useState(false);
   const [connectingWallet, setConnectingWallet] = useState(false);
-  const [quantity, setQuantity] = useState(null);
+  const [quantity, setQuantity] = useState("");
   const [quantityOwned, setQuantityOwned] = useState(0);
   const [chain, setChain] = useState("");
   const [account, setAccount] = useState();
