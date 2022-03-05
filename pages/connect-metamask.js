@@ -10,8 +10,8 @@ import WalletConnectProvider from '@walletconnect/web3-provider';
 import WalletLink from 'walletlink';
 import { ellipseAddress, getChainData } from '../lib/utilities';
 import { useDispatch, useSelector } from "react-redux";
-import { connect } from "./redux/blockchain/blockchainActions";
-import { fetchData } from "./redux/data/dataActions";
+import { connect } from "../redux/blockchain/blockchainActions";
+import { fetchData } from "../redux/data/dataActions";
 import { BounceLoader, BeatLoader } from 'react-spinners';
 import Swal from 'sweetalert2';
 
