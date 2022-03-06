@@ -181,60 +181,57 @@ export default function Home() {
           }
         </VerticalTimeline>
       </section>
-      <section id="contact" className={styles.contact}>
-        <div className={styles.contactContainer}>
-          <p className={styles.contactTitle}>Get in Touch</p>
-          <p className={styles.contactSubtitle}>CONTACT</p>
-          <div className={styles.contactForm}>
-            <div className={styles.contactInfoContainer}>
-              <div className={styles.contactInfoBox}>
-                <div className={styles.contactIcon}><MdLocalPhone /></div>
-                <p>+62883120910</p>
-              </div>
-              <div className={styles.contactInfoBox}>
-                <div className={styles.contactIcon}><MdEmail /></div>
-                <p>stanlyskwok@gmail.com</p>
-              </div>
-              <div className={styles.contactInfoBox}>
-                <div className={styles.contactIcon}><MdLocationCity /></div>
-                <p>Surabaya, Indonesia</p>
-              </div>
+      <section className={styles.team}>
+        <video style={{  position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          opacity: 0.8
+        }} className="teamVid" src='/videos/video-2.mp4' autoPlay loop muted />
+        <div className={styles.teamContent}>
+          <div className={styles.teamContainer}>
+            <div className={styles.teamCaptionContainer}>
+              <div className={styles.teamCaption}><span className={styles.teamCaptionSpan}>MEET THE TEAM</span></div>
             </div>
-            <div className={styles.verticalRule}>
-              <hr width="1" size="250"></hr>
-            </div>
-            <div className={styles.contactInputFormContainer}>
-              <div className={styles.formGroup}>
-                <label className={styles.formLabel}>Your name</label>
-                <input 
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                />
+            <div className={styles.teamImages}>
+              <div className={styles.teamImageCard}>
+                <div className={styles.teamVideoContainer}>
+                  <video className={styles.teamVideo} src='/videos/video-3.mp4' autoPlay loop muted />
+                  <div className={styles.teamInnerBox}>
+                    <div className={styles.teamNestedInnerBox}>
+                      <p className={styles.memberName}>Zeriis</p>
+                      <p className={styles.memberRole}>BLOCKCHAIN</p>
+                      <p className={styles.memberRole}>WIZARD</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className={styles.formGroup}>
-                <label className={styles.formLabel}>Your email</label>
-                <input 
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
+             <div className={styles.teamImageCard}>
+                <div className={styles.teamVideoContainer}>
+                  <video className={styles.teamVideo} src='/videos/video-3.mp4' autoPlay loop muted />
+                  <div className={styles.teamInnerBox}>
+                    <div className={styles.teamNestedInnerBox}>
+                      <p className={styles.memberName}>Zeriis</p>
+                      <p className={styles.memberRole}>BLOCKCHAIN</p>
+                      <p className={styles.memberRole}>WIZARD</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className={styles.formGroup}>
-                <label className={styles.formLabel}>Your message</label>
-                <textarea
-                  type="text"
-                  id="message"
-                  name="message"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                />
+             <div className={styles.teamImageCard}>
+                <div className={styles.teamVideoContainer}>
+                  <video className={styles.teamVideo} src='/videos/video-3.mp4' autoPlay loop muted />
+                  <div className={styles.teamInnerBox}>
+                    <div className={styles.teamNestedInnerBox}>
+                      <p className={styles.memberName}>Zeriis</p>
+                      <p className={styles.memberRole}>BLOCKCHAIN</p>
+                      <p className={styles.memberRole}>WIZARD</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <button className={styles.contactBtn} type="submit">Send</button>
             </div>
           </div>
         </div>

@@ -447,15 +447,88 @@
   }
 }
 
-.contact {
-  background-color: #2B2B2B;
+.teamCaption {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 60px;
+  z-index: 5;
+  position: relative;
 }
 
-.contactContainer {
-  padding: 50px 0;
+.teamCaptionSpan {
+  padding: 10px 15px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+}
+
+.team {
+  background-color: #2B2B2B;
+  padding-bottom: 120px;
+}
+
+.teamContainer {
   margin: 0 auto;
   max-width: 1200px;
   color: #C3BDBC;
+}
+
+.teamImages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.teamImageCard {
+  margin: 0 auto;
+}
+
+.team {
+  position: relative;
+}
+
+.team .teamVid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.teamVideo {
+  width: 350px;
+}
+
+.teamVideoContainer {
+  position: relative;
+}
+
+.teamInnerBox {
+  position: absolute;
+  padding: 7px;
+  background-color: rgba(24, 24, 24, 0.8);
+  width: 90%;
+  left: 5%;
+  bottom: -30%;
+}
+
+.teamNestedInnerBox {
+  padding: 10px 30px 30px;
+  border: 1px solid #F5D456;
+}
+
+.memberName {
+  font-size: 25px;
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.memberRole {
+  font-size: 22px;
+  color: #F5D456;
+  line-height: 1.2;
 }
 
 .contactTitle,
@@ -821,5 +894,37 @@
 
   .aboutContainer {
     max-width: 500px;
+  }
+
+  .roadmapTitle {
+    padding-top: 20px;
+    font-size: 50px;
+  }
+
+  .teamImages {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .teamImageCard:not(:last-of-type) {
+    margin: 0 auto 130px;
+  }
+
+  .teamCaption {
+    font-size: 30px;
+  }
+
+  .connectContainer {
+    padding: 20px 40px;
+  }
+
+  .mintContainer {
+    padding: 20px 40px;
+  }
+
+  .mintingBtnContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
   }
 }
