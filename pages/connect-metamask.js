@@ -157,7 +157,7 @@ export default function ConnectMetamask() {
             <Image width={125} height={125} src='/images/bored-ape.png' alt="monkey" />
           </div>
         </div>
-        <p>{blockchain.errorMsg}</p>
+        <p>{blockchain.errorMsg}<br/>And then refresh the page.</p>
       </div>
     </div>
     );
@@ -175,13 +175,19 @@ export default function ConnectMetamask() {
           setConnectingWallet(true);
           dispatch(connect());
           getData();
-          setTimeout(() => {
-            setConnectingWallet(false);
-            Toast.fire({
-              icon: 'success',
-              title: 'Wallet connected successfully!'
-            });
-          }, 2500);
+          if (blockchain.account != "" && blockchain.account != null) {
+            setTimeout(() => {
+              setConnectingWallet(false);
+              Toast.fire({
+                icon: 'success',
+                title: 'Wallet connected successfully!'
+              });
+            }, 2500);
+          } else {
+            setTimeout(() => {
+              setConnectingWallet(false);
+            }, 2500);
+          }
         }}>Connect Metamask</a>
       </div>
     </div>
