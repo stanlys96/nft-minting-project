@@ -49,7 +49,7 @@ export default function ConnectMetamask() {
     setFeedback("Minting your Nerdy Coder Clone...");
     setClaimingNft(true);
     blockchain.smartContract.methods
-      .mint(blockchain.account, _amount)
+      .mint(_amount)
       .send({
         gasLimit: "285000",
         to: "0x1c5B16a273f65BfB580087f5250B03D64d83218F",

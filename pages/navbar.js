@@ -14,13 +14,13 @@ export default function Navbar() {
       <nav className={styles.navbar}>
         <div className={styles.insideNavbar}>
           <div className={styles.logoContainer}>
-            <Image src='/images/bored-ape.png' width={40} height={40} />
+            <img src='/images/bored-ape.png' className={styles.navbarImg} width={40} height={40} />
             <Link to="home" smooth={true} spy={true} onClick={() => {
               router.push('/', undefined, { shallow: true });
               dispatch(resetAccount());
             }} href="/" className={styles.logoName}>escAPE</Link>
           </div>
-          <div>
+          <div className={styles.navlinkContainer}>
             <Link onClick={() => {
               router.push('/', undefined, { shallow: true });
               dispatch(resetAccount());
