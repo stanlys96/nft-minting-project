@@ -181,7 +181,7 @@ export default function Home() {
           }
         </VerticalTimeline>
       </section>
-      <section className={styles.team}>
+      <section id="team" className={styles.team}>
         <video style={{  position: "absolute",
           top: 0,
           left: 0,

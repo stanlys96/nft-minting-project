@@ -10,6 +10,27 @@
   overflow: hidden;
 }
 
+.socialMediaContainer {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.socMedIconContainer {
+  padding: 7px;
+  border-radius: 50%;
+  background-color: #0070f3;
+}
+
+.socMedIconContainer:first-of-type {
+  margin-right: 10px;
+}
+
+.socMedIconContainer:last-of-type {
+  margin-left: 10px;
+}
+
 .main {
   min-height: 100vh;
   padding: 4rem 0;
@@ -18,6 +39,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.navlinkContainer {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 10px auto 0;
 }
 
 .footer {
@@ -840,7 +868,6 @@
   }
 
   .navlinkContainer {
-    display: flex;
     justify-content: space-around;
   }
 

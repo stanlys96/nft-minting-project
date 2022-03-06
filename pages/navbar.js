@@ -4,6 +4,8 @@ import { Link } from 'react-scroll';
 import { useRouter } from 'next/router';
 import { useDispatch, useSelector } from "react-redux";
 import { resetAccount } from "../redux/blockchain/blockchainActions";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter, faDiscord } from '@fortawesome/free-brands-svg-icons';
 
 export default function Navbar() {
   const dispatch = useDispatch();
@@ -20,6 +22,15 @@ export default function Navbar() {
               dispatch(resetAccount());
             }} href="/" className={styles.logoName}>escAPE</Link>
           </div>
+          <div className={styles.socialMediaContainer}>
+            <a target="_blank" className={styles.socMedIconContainer} href="https://discord.com"><FontAwesomeIcon style={{ color: '#fff' }} icon={faDiscord} /></a>
+            <a target="_blank" className={styles.socMedIconContainer} href="https://twitter.com"><FontAwesomeIcon style={{ color: '#fff' }} icon={faTwitter} /></a>
+          </div>
+          <Link onClick={() => {
+              router.push('/connect-metamask', undefined, { shallow: true });
+              dispatch(resetAccount());
+            }} to="connect-metamask" href="/connect-metamask" className={styles.connectWalletBtn}>CONNECT WALLET</Link>
+        </div>
           <div className={styles.navlinkContainer}>
             <Link onClick={() => {
               router.push('/', undefined, { shallow: true });
@@ -42,15 +53,10 @@ export default function Navbar() {
             <Link onClick={() => {
               router.push('/', undefined, { shallow: true });
               dispatch(resetAccount());
-            }} to="contact" smooth={true} spy={true} href="/" className={styles.navlink}>
-              Contact
+            }} to="team" smooth={true} spy={true} href="/" className={styles.navlink}>
+              Team
             </Link>
           </div>
-          <Link onClick={() => {
-              router.push('/connect-metamask', undefined, { shallow: true });
-              dispatch(resetAccount());
-            }} to="connect-metamask" href="/connect-metamask" className={styles.connectWalletBtn}>CONNECT WALLET</Link>
-        </div>
       </nav>
     </div>
   );
