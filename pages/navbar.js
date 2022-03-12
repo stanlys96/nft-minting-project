@@ -22,15 +22,6 @@ export default function Navbar() {
               dispatch(resetAccount());
             }} href="/" className={styles.logoName}>escAPE</Link>
           </div>
-          <div className={styles.socialMediaContainer}>
-            <a target="_blank" rel="noreferrer" className={styles.socMedIconContainer} href="https://discord.com"><FontAwesomeIcon style={{ color: '#fff' }} icon={faDiscord} /></a>
-            <a target="_blank" rel="noreferrer" className={styles.socMedIconContainer} href="https://twitter.com"><FontAwesomeIcon style={{ color: '#fff' }} icon={faTwitter} /></a>
-          </div>
-          <Link onClick={() => {
-              router.push('/connect-metamask', undefined, { shallow: true });
-              dispatch(resetAccount());
-            }} to="connect-metamask" href="/connect-metamask" className={styles.connectWalletBtn}>CONNECT WALLET</Link>
-        </div>
           <div className={styles.navlinkContainer}>
             <Link onClick={() => {
               router.push('/', undefined, { shallow: true });
@@ -56,7 +47,16 @@ export default function Navbar() {
             }} to="team" smooth={true} spy={true} href="/" className={styles.navlink}>
               Team
             </Link>
+            <div className={styles.socialMediaContainer}>
+              <a target="_blank" rel="noreferrer" className={styles.socMedIconContainer} href="https://discord.com"><FontAwesomeIcon style={{ color: '#fff' }} icon={faDiscord} /></a>
+              <a target="_blank" rel="noreferrer" className={styles.socMedIconContainer} href="https://twitter.com"><FontAwesomeIcon style={{ color: '#fff' }} icon={faTwitter} /></a>
+            </div>
           </div>
+          <Link onClick={() => {
+              router.push('/connect-metamask', undefined, { shallow: true });
+              dispatch(resetAccount());
+            }} to="connect-metamask" href="/connect-metamask" className={styles.connectWalletBtn}>CONNECT WALLET</Link>
+        </div>
       </nav>
     </div>
   );

@@ -43,9 +43,9 @@
 
 .navlinkContainer {
   display: flex;
-  justify-content: center;
+  align-items: center;
   max-width: 1200px;
-  margin: 10px auto 0;
+  margin: 0 auto;
 }
 
 .footer {
@@ -189,8 +189,8 @@
   border-bottom: 1px solid #0AC593;
 }
 
-.navlink:not(:first-of-type) {
-  margin-left: 60px;
+.navlink {
+  margin-right: 60px;
 }
 
 .connectWalletBtn {
@@ -706,6 +706,22 @@
   font-weight: bold;
 }
 
+.quantitySelectContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.minPlusButton {
+  background-color: #FED2A2;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.theNumber {
+  margin: 0 10px;
+}
+
 .quantityContainer {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -869,6 +885,15 @@
 
   .navlinkContainer {
     justify-content: space-around;
+  }
+
+  .navlink {
+    margin: 0;
+  }
+
+  .socialMediaContainer {
+    position: absolute; 
+    top: 45px;
   }
 
   .caption {

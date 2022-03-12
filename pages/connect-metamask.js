@@ -33,7 +33,7 @@ export default function ConnectMetamask() {
   const [feedback, setFeedback] = useState("Maybe it's your lucky day.");
   const [claimingNft, setClaimingNft] = useState(false);
   const [connectingWallet, setConnectingWallet] = useState(false);
-  const [quantity, setQuantity] = useState("");
+  const [quantity, setQuantity] = useState(1);
   const [quantityOwned, setQuantityOwned] = useState(0);
   const [chain, setChain] = useState("");
   const [account, setAccount] = useState();
@@ -203,19 +203,21 @@ export default function ConnectMetamask() {
           </div>
           <p className={styles.mintAddress}>Connected account: ..{blockchain.account.slice(32)}</p>
           <p className={styles.ownedSupply}>Number of escAPES you own: <span className={styles.quantityOwned}>{data.totalOwned}</span></p>
-          {data.totalOwned < 3 && <div className={styles.mintingBtnContainer}>
-            {data.totalOwned < 3 && <a href="#" onClick={() => {
-              dispatch(updatingBtnOneAction());
-            }} className={`${blockchain.btnOneSelected ? styles.mintBtnClicked : styles.mintingBtn}`}>Mint 1</a>}
-            {data.totalOwned < 2 && <a href="#" onClick={() => {
-              dispatch(updatingBtnTwoAction());
-            }} className={`${blockchain.btnTwoSelected ? styles.mintBtnClicked : styles.mintingBtn}`}>Mint 2</a>}
-            {data.totalOwned < 1 && <a href="#" onClick={() => {
-              dispatch(updatingBtnThreeAction());
-            }}  className={`${blockchain.btnThreeSelected ? styles.mintBtnClicked : styles.mintingBtn}`}>Mint 3</a>}
-          </div>}
-          <p className={styles.mintTotalPrice}>Total Price: {blockchain.btnOneSelected ? "0.5" : blockchain.btnTwoSelected ? "1.0" : blockchain.btnThreeSelected ? "1.5" : "0.0"} ETH</p>
-          {data.totalOwned < 3 ? <a className={`${styles.connectMetamaskBtn}`} style={ blockchain.btnOneSelected || blockchain.btnTwoSelected || blockchain.btnThreeSelected ? {} : { backgroundColor: "#E1E1E1" }} onClick={() => {
+          <div className={styles.quantitySelectContainer}>
+            <a href="#" onClick={() => {
+              if (quantity > 1) {
+                setQuantity(quantity - 1);
+              }
+            }} className={styles.minPlusButton}>-</a>
+            <span className={styles.theNumber}>{quantity}</span>
+            <a href="#" onClick={() => {
+              if (parseInt(data.totalOwned) + parseInt(quantity) < 3) {
+                setQuantity(quantity + 1);
+              } 
+            }} className={styles.minPlusButton}>+</a>
+          </div>
+          <p className={styles.mintTotalPrice}>Total Price: {(quantity * 0.5).toFixed(1)} ETH</p>
+          {data.totalOwned < 3 ? <a className={`${styles.connectMetamaskBtn}`} onClick={() => {
             let num = 0;
             if (blockchain.btnOneSelected) {
               num = 1;
