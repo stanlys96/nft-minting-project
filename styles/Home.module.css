@@ -41,6 +41,10 @@
   align-items: center;
 }
 
+.home {
+  height: 80vh;
+}
+
 .navlinkContainer {
   display: flex;
   align-items: center;
@@ -260,6 +264,7 @@
   max-width: 1200px;
   display: flex;
   justify-content: space-between;
+  visibility: hidden;
 }
 
 @media (max-width: 600px) {
@@ -331,7 +336,7 @@
 }
 
 #aboutPage {
-  background-image: url('/images/black-bg-3.jpeg');
+  background-image: url('/images/BG2-01.png');
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -396,6 +401,12 @@
   margin: 50px 0 0 100px;
 }
 
+.insideCaption {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  padding: 10px;
+}
+
 .captionTitle {
   font-size: 55px;
   font-family: 'Shizuru', cursive;
@@ -412,12 +423,14 @@
 
 .captionDescription {
   color: #949494;
-  padding: 20px 0;
+  padding: 20px 10px;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
 }
 
 #roadmap {
-  background-color: #537895;
-  background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+  background-image: url('/images/BG4-01.png');
 }
 
 .roadmapTitle {
@@ -493,6 +506,7 @@
 .team {
   background-color: #2B2B2B;
   padding-bottom: 120px;
+  background-image: url('/images/bg-escape.png');;
 }
 
 .teamContainer {
@@ -939,9 +953,15 @@
 
   .aboutCaptionContainer {
     /* margin: 50px 0 0 10px; */
-    margin: 0;
+    margin: 0 auto;
     padding: 20px 20px 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .captionDescription {
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   .aboutContainer {

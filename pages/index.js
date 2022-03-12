@@ -16,61 +16,42 @@ import Navbar from './navbar';
 let timelineElements = [
   {
     id: 1,
-    title: "Q1 2022",
+    title: "25% sold out",
     location: "Dragontail, Ascana",
     description:
-      "PlayFi beta 20+ Games & Interactive templates added Wallet integration",
+      "We will do collaboration with other alpha projects to benefit our holders.",
     buttonText: "View Frontend Projects",
     date: "August 2016 - present",
     icon: "work",
   },
   {
     id: 2,
-    title: "Q2 2022",
+    title: "50% sold out",
     location: "Skystead, Craonia",
     description:
-      "Token listing / IDO Payment Gateway NFT marketplace prototype",
+      "We are going to give donation to our chosen charity partners in the name of holders.",
     buttonText: "View Backend Projects",
     date: "June 2013 - August 2016",
     icon: "work",
   },
   {
     id: 3,
-    title: "Q3 2022",
+    title: "75% sold out",
     location: "South Warren, Geshington",
     description:
-      "NFT Marketplace v1 Creator Kit",
+      "Free airdrop a few NFTs to our current verified holders who supported us through this journey.",
     buttonText: "Company Website",
     date: "September 2011 - June 2013",
     icon: "work",
   },
   {
     id: 4,
-    title: "Q4 2022",
+    title: "100% sold out",
     location: "South Warren, Geshington",
     description:
-      "Esports platform beta Native Social Media Platform support Mobile apps",
+      "It is time for celebration by “escape” the real world. We are going to make our NFT alive in the metaverse.",
     buttonText: "Course Certificate",
     date: "September 2011",
-    icon: "school",
-  },
-  {
-    id: 5,
-    title: "Q1 2023",
-    location: "Skystead, Craonia",
-    description:
-      "Launching 50 more rare escAPES",
-    buttonText: "College Projects",
-    date: "2007 - 2011",
-    icon: "school",
-  },
-  {
-    id: 6,
-    title: "Q2 2023",
-    location: "Dragontail, Ascana",
-    description:
-      "escAPES NFT available on mobile apps.",
-    date: "2003 - 2007",
     icon: "school",
   },
 ];
@@ -105,20 +86,6 @@ export default function Home() {
               <video src='/videos/video-3.mp4' autoPlay loop muted />
             </div>
           </div>
-          <div className={styles.wrapper}>
-            <span></span>
-            <span></span>
-            <div className={styles.videoBox}>
-              <video src='/videos/video-3.mp4' autoPlay loop muted />
-            </div>
-          </div>
-          <div className={styles.wrapper}>
-            <span></span>
-            <span></span>
-            <div className={styles.videoBox}>
-              <video src='/videos/video-3.mp4' autoPlay loop muted />
-            </div>
-          </div>
         </div>
       </section>
       <section id={styles.aboutPage}>
@@ -126,34 +93,15 @@ export default function Home() {
           <div className={styles.imgContainer}>
             <div className={styles.imgCard}>
               <video className={styles.aboutVideo} src='/videos/video-3.mp4' autoPlay loop muted></video>
-              <p>Ape #80</p>
-              <div className={styles.imgAuthor}>
-                <img src='/images/dummy-image-1.jpeg' />
-                <div className={styles.authorContainer}>
-                  <p>Owned By</p>
-                  <p>ZiggyZ4ga</p>
-                </div>
-              </div>
             </div>
             <div className={styles.imgCard}>
               <video className={styles.aboutVideo} src='/videos/video-3.mp4' autoPlay loop muted></video>
-              <p>Ape #442</p>
-              <div className={styles.imgAuthor}>
-                <img src='/images/dummy-image-2.jpeg' />
-                <div className={styles.authorContainer}>
-                  <p>Owned By</p>
-                  <p>D0ctOR1n</p>
-                </div>
-              </div>
             </div>
           </div>
           <div className={styles.aboutCaptionContainer}>
-            <p className={styles.captionTitle}>ESCAPE NFT</p>
-            <p className={styles.captionBlockchain}>Ethereum Blockchain</p>
-            <p className={styles.captionSubtitle}>Get to Know More About Them</p>
-            <p className={styles.captionDescription}>Escapes are a collection of 5,000 unique, programmatically generated NFTs with proof of ownership stored on the Ethereum blockchain. Each Escape is generated randomly from dozens of different assets.</p>
-            <p className={styles.captionSubtitle}>Founder</p>
-            <p className={styles.captionDescription}>Founder Escapes are numbered from #1 to #8000 and they carry special benefits for their owners. From time to time, Escapes will be raffled between Founders (those who own Founder Escapes). Each Founder Escape you have is a ticket for these raffles.</p>
+            <p className={styles.captionTitle}><span className={styles.insideCaption}>ESCAPE NFT</span></p>
+            <p className={styles.captionBlockchain}><span className={styles.insideCaption}>About Us</span></p>
+            <p className={styles.captionDescription}>EscApe is a collection of 5555 2D animation Ape NFTs that is going to rock the metaverse in March 2022. It was designed by the talented Flatonic team who already well recognized in 2d animation world. Our purpose is to bring 2D animation and be the market leader in the NFT space for that category.<br/><br/> We are representing those individuals that need to “escape” whatever they want to run away from. So, this is definitely the perfect NFTs collection for PFP or even for your metaverse avatar. LFG people, we are escaping together to the Moon!!!</p>
           </div>
         </div>
       </section>
@@ -182,14 +130,6 @@ export default function Home() {
         </VerticalTimeline>
       </section>
       <section id="team" className={styles.team}>
-        <video style={{  position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          opacity: 0.8
-        }} className="teamVid" src='/videos/video-2.mp4' autoPlay loop muted />
         <div className={styles.teamContent}>
           <div className={styles.teamContainer}>
             <div className={styles.teamCaptionContainer}>
