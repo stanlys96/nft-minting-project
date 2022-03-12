@@ -99,7 +99,7 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.aboutCaptionContainer}>
-            <img width={150} src="/images/logo-escape.jpg" alt="escape-logo" />
+            <img className={styles.escapeImg} width={150} src="/images/logo-escape.jpg" alt="escape-logo" />
             <p className={styles.captionBlockchain}><span className={styles.insideCaption}>About Us</span></p>
             <p className={styles.captionDescription}>EscApe is a collection of 5555 2D animation Ape NFTs that is going to rock the metaverse in March 2022. It was designed by the talented Flatonic team who already well recognized in 2d animation world. Our purpose is to bring 2D animation and be the market leader in the NFT space for that category.<br/><br/> We are representing those individuals that need to “escape” whatever they want to run away from. So, this is definitely the perfect NFTs collection for PFP or even for your metaverse avatar. LFG people, we are escaping together to the Moon!!!</p>
           </div>
