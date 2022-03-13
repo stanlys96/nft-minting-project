@@ -275,12 +275,12 @@
 
 .discoverBtn {
   position: absolute;
-  top: 20px;
-  left: 120px;
+  top: 40px;
+  left: 170px;
   display: inline-block;
   background-color: #000000;
   color: #fff;
-  padding: 10px 30px;
+  padding: 20px 40px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   border: 2px solid #888;
@@ -371,7 +371,7 @@
   background-image: url('/images/BG2-01.png');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 120vh;
   width: 100vw;
   background-color: #000;
 }
@@ -1053,7 +1053,7 @@
   }
 
   #aboutPage {
-    height: 100vh;
+    height: 120vh;
     background-image: url('/images/BG3-01.png');
   }
 
