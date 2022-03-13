@@ -275,12 +275,12 @@
 
 .discoverBtn {
   position: absolute;
-  top: 40px;
-  left: 170px;
+  top: 20px;
+  left: 120px;
   display: inline-block;
   background-color: #000000;
   color: #fff;
-  padding: 20px 40px;
+  padding: 10px 30px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   border: 2px solid #888;
@@ -1053,10 +1053,12 @@
   }
 
   #aboutPage {
+    height: 100vh;
     background-image: url('/images/BG3-01.png');
   }
 
   .networkContainer {
     margin-top: 10px;
+    font-size: 18px;
   }
 }

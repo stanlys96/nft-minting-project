@@ -97,7 +97,7 @@ export default function Home() {
           </div>
           <div className={styles.aboutCaptionContainer}>
             <div className={styles.captionLogoContainer}>
-              <img className={styles.escapeImg} width={150} src="/images/logo-escape.jpg" alt="escape-logo" />
+              <img className={styles.escapeImg} width={100} src="/images/logo-escape.jpg" alt="escape-logo" />
               <a className={styles.discoverBtn} onClick={() => {
                 router.push('/connect-metamask', undefined, { shallow: true });
               }}>MINT NOW</a>
