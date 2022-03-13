@@ -153,8 +153,8 @@ export default function ConnectMetamask() {
     <div className={styles.connectMetamask}>
       <div className={styles.connectContainer}>
         <div style={{ textAlign: 'center' }}>
-          <div className={styles.iconContainer}>
-            <Image width={125} height={125} src='/images/bored-ape.png' alt="monkey" />
+          <div style={{ marginBottom: '10px' }}>
+            <Image width={125} height={125} src='/images/logo-escape.jpg' alt="monkey" />
           </div>
         </div>
         <p>{blockchain.errorMsg}<br/>And then refresh the page.</p>
@@ -167,8 +167,8 @@ export default function ConnectMetamask() {
     <div className={styles.connectMetamask}>
       <div className={styles.connectContainer}>
         <div style={{ textAlign: 'center' }}>
-          <div className={styles.iconContainer}>
-            <Image width={125} height={125} src='/images/bored-ape.png' alt="monkey" />
+          <div style={{ marginBottom: '10px' }}>
+            <Image width={125} height={125} src='/images/logo-escape.jpg' alt="monkey" />
           </div>
         </div>
         <a className={styles.connectMetamaskBtn} onClick={async() => {
