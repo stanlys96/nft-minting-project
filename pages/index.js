@@ -74,9 +74,6 @@ export default function Home() {
             <p className={styles.secondCaption}>A Unique And Innovative <span className={styles.captionSpan}>Collection</span> To Discover <span className={styles.captionSpan}>NFT</span></p>
             <p className={styles.secondCaption}><span className={styles.captionSpan}>Art</span> Starts Now And Discover NFTs</p>
           </div>
-          <a className={styles.discoverBtn} onClick={() => {
-            router.push('/connect-metamask', undefined, { shallow: true });
-          }}>MINT NOW</a>
         </div>
         <div className={styles.headerImages}>
           <div className={styles.wrapper}>
@@ -99,9 +96,19 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.aboutCaptionContainer}>
-            <img className={styles.escapeImg} width={150} src="/images/logo-escape.jpg" alt="escape-logo" />
+            <div className={styles.captionLogoContainer}>
+              <img className={styles.escapeImg} width={150} src="/images/logo-escape.jpg" alt="escape-logo" />
+              <a className={styles.discoverBtn} onClick={() => {
+                router.push('/connect-metamask', undefined, { shallow: true });
+              }}>MINT NOW</a>
+              <div className={styles.networkContainer}>
+                <p>Network: Ethereum</p>
+                <p>Date: tba</p>
+                <p>Price: free for the 1st 577 nfts and 0.025 eth each for the rest</p>
+              </div>  
+            </div>
             <p className={styles.captionBlockchain}><span className={styles.insideCaption}>About Us</span></p>
-            <p className={styles.captionDescription}>EscApe is a collection of 5555 2D animation Ape NFTs that is going to rock the metaverse in March 2022. It was designed by the talented Flatonic team who already well recognized in 2d animation world. Our purpose is to bring 2D animation and be the market leader in the NFT space for that category.<br/><br/> We are representing those individuals that need to “escape” whatever they want to run away from. So, this is definitely the perfect NFTs collection for PFP or even for your metaverse avatar. LFG people, we are escaping together to the Moon!!!</p>
+            <p className={styles.captionDescription}>escAPE is a collection of 6577 2D animation Ape NFTs that is going to rock the metaverse in March 2022. It was designed by the talented Flatonic team who already well recognized in 2d animation world. Our purpose is to bring 2D animation and be the market leader in the NFT space for that category.<br/><br/> We are representing those individuals that need to “escape” whatever they want to run away from. So, this is definitely the perfect NFTs collection for PFP or even for your metaverse avatar. LFG people, we are escaping together to the Moon!!!</p>
           </div>
         </div>
       </section>
@@ -133,36 +140,36 @@ export default function Home() {
         <div className={styles.teamContent}>
           <div className={styles.teamContainer}>
             <div className={styles.teamCaptionContainer}>
-              <div className={styles.teamCaption}><span className={styles.teamCaptionSpan}>MEET THE TEAM</span></div>
+              <div className={styles.teamCaption}><span className={styles.teamCaptionSpan}>THE TEAM</span></div>
             </div>
             <div className={styles.teamImages}>
               <div className={styles.teamImageCard}>
                 <div className={styles.teamVideoContainer}>
-                  <video className={styles.teamVideo} src='/videos/video-3.mp4' autoPlay loop muted />
+                  <video className={styles.teamVideo} src='/videos/gif-3.mp4' autoPlay loop muted />
                   <div className={styles.teamInnerBox}>
                     <div className={styles.teamNestedInnerBox}>
-                      <p className={styles.memberName}>Zeriis</p>
-                      <p className={styles.memberRole}>BLOCKCHAIN</p>
-                      <p className={styles.memberRole}>WIZARD</p>
+                      <p className={styles.memberName}>Romero</p>
+                      <p className={styles.memberRole}>PROJECT</p>
+                      <p className={styles.memberRole}>LEADER</p>
                     </div>
                   </div>
                 </div>
               </div>
              <div className={styles.teamImageCard}>
                 <div className={styles.teamVideoContainer}>
-                  <video className={styles.teamVideo} src='/videos/video-3.mp4' autoPlay loop muted />
+                  <video className={styles.teamVideo} src='/videos/gif-1.mp4' autoPlay loop muted />
                   <div className={styles.teamInnerBox}>
                     <div className={styles.teamNestedInnerBox}>
-                      <p className={styles.memberName}>Zeriis</p>
-                      <p className={styles.memberRole}>BLOCKCHAIN</p>
-                      <p className={styles.memberRole}>WIZARD</p>
+                      <p className={styles.memberName}>Flatonic</p>
+                      <p className={styles.memberRole}>2D</p>
+                      <p className={styles.memberRole}>ANIMATOR</p>
                     </div>
                   </div>
                 </div>
               </div>
              <div className={styles.teamImageCard}>
                 <div className={styles.teamVideoContainer}>
-                  <video className={styles.teamVideo} src='/videos/video-3.mp4' autoPlay loop muted />
+                  <video className={styles.teamVideo} src='/videos/gif-2.mp4' autoPlay loop muted />
                   <div className={styles.teamInnerBox}>
                     <div className={styles.teamNestedInnerBox}>
                       <p className={styles.memberName}>Zeriis</p>

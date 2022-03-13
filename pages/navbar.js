@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import { useDispatch, useSelector } from "react-redux";
 import { resetAccount } from "../redux/blockchain/blockchainActions";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faDiscord } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter, faDiscord, faOpensea } from '@fortawesome/free-brands-svg-icons';
 
 export default function Navbar() {
   const dispatch = useDispatch();
@@ -16,11 +16,7 @@ export default function Navbar() {
       <nav className={styles.navbar}>
         <div className={styles.insideNavbar}>
           <div className={styles.logoContainer}>
-            <img src='/images/bored-ape.png' className={styles.navbarImg} width={40} height={40} />
-            <Link to="home" smooth={true} spy={true} onClick={() => {
-              router.push('/', undefined, { shallow: true });
-              dispatch(resetAccount());
-            }} href="/" className={styles.logoName}>escAPE</Link>
+            <img src='/images/logo-escape.jpg' className={styles.navbarImg} width={60} />
           </div>
           <div className={styles.navlinkContainer}>
             <Link onClick={() => {
@@ -48,8 +44,8 @@ export default function Navbar() {
               Team
             </Link>
             <div className={styles.socialMediaContainer}>
-              <a target="_blank" rel="noreferrer" className={styles.socMedIconContainer} href="https://discord.com"><FontAwesomeIcon style={{ color: '#fff' }} icon={faDiscord} /></a>
-              <a target="_blank" rel="noreferrer" className={styles.socMedIconContainer} href="https://twitter.com"><FontAwesomeIcon style={{ color: '#fff' }} icon={faTwitter} /></a>
+              <a target="_blank" rel="noreferrer" href="https://opensea.io/collection/escape-official"><img width={30} style={{ marginRight: "10px" }} src="/images/opensea.png" alt="opensea-logo" /></a>
+              <a target="_blank" rel="noreferrer" href="https://twitter.com/Eapeofficialnft"><img width={30} style={{ marginLeft: "10px", borderRadius: "50%" }} src="/images/twit-icon.png" alt="opensea-logo" /></a>
             </div>
           </div>
           <Link onClick={() => {

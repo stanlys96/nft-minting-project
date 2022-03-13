@@ -10,10 +10,17 @@
   overflow: hidden;
 }
 
-.escapeImg {
-  margin: 0 auto;
-  display: inline-block;
-  text-align: center;
+.textFree {
+  font-weight: bold;
+}
+
+.greenText {
+  color: #118C4F;
+}
+
+.aboutLogoContainer {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .socialMediaContainer {
@@ -21,6 +28,13 @@
   justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.networkContainer {
+  font-weight: bold;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
 }
 
 .socMedIconContainer {
@@ -217,6 +231,7 @@
 
 .header {
   padding-top: 90px;
+  height: 80vh;
 }
 
 .headerCaption {
@@ -254,13 +269,22 @@
   margin-top: 20px;
 }
 
+.captionLogoContainer {
+  position: relative;
+}
+
 .discoverBtn {
-  background-color: #f8e968;
-  color: #000000;
-  padding: 10px 30px;
+  position: absolute;
+  top: 40px;
+  left: 170px;
+  display: inline-block;
+  background-color: #000000;
+  color: #fff;
+  padding: 20px 40px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   border: 2px solid #888;
+  font-size: 30px;
 }
 
 .discoverBtn:hover {
@@ -373,6 +397,7 @@
   align-items: center;
   height: 100%;
   color: #fff;
+  visibility: hidden;
 }
 
 .imgContainer img {
@@ -432,7 +457,7 @@
 .captionDescription {
   color: #949494;
   padding: 20px 10px;
-  font-size: 18px;
+  font-size: 16px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 20px;
 }
@@ -514,7 +539,10 @@
 .team {
   background-color: #2B2B2B;
   padding-bottom: 120px;
-  background-image: url('/images/bg-escape.png');;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('/images/bg-escape.png');
 }
 
 .teamContainer {
@@ -697,6 +725,7 @@
   border-radius: 20px;
   text-align: center;
   line-height: 1.3;
+  font-size: 22px;
 }
 
 .connectContainer {
@@ -784,13 +813,13 @@
 }
 
 .mintSubtitle {
-  color: #7D27CF;
+  color: #000000;
   font-weight: bold;
   margin-top: 20px;
 }
 
 .mintCondition {
-  color: #7D27CF;
+  color: #000000;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -895,7 +924,7 @@
 
 }
 
-@media screen and (max-width: 500px) and (min-width: 0px) {
+@media screen and (max-width: 1040px) and (min-width: 0px) {
   .logoName {
     display: none;
   }
@@ -1006,5 +1035,28 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 20px;
+  }
+
+  .captionLogoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .discoverBtn {
+    position: static;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  #aboutPage {
+    background-image: url('/images/BG3-01.png');
+  }
+
+  .networkContainer {
+    margin-top: 10px;
   }
 }

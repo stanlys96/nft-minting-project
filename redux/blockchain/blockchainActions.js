@@ -101,7 +101,7 @@ export const connect = () => {
           console.log("AAAA");
           const SmartContractObj = new Web3EthContract(
             SmartContract,
-            "0x76377E3901Df8b43964DB695b16f7D68DedFC90c"
+            "0xA7b9Ce95C4918dFd5645562907786b67e99812ef"
           );
           dispatch(
             connectSuccess({

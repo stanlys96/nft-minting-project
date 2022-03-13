@@ -88,7 +88,7 @@ export default function ConnectMetamask() {
     setFeedback("Minting your Nerdy Coder Clone...");
     setClaimingNft(true);
     blockchain.smartContract.methods
-      .mintOne(blockchain.account)
+      .mintOne()
       .send({
         gasLimit: "285000",
         to: "0x1c5B16a273f65BfB580087f5250B03D64d83218F",
@@ -201,8 +201,8 @@ export default function ConnectMetamask() {
             {data.totalOwned < 3 && <p className={styles.mintSubtitle}>Get an escAPE now!</p>}
             {data.totalOwned < 3 && <p className={styles.mintCondition}>Max of {data.totalOwned == 0 ? 3 : data.totalOwned == 1 ? 2 : data.totalOwned == 2 ? 1 : data.totalOwned > 2 ? 0 : 0} escAPES per transaction.</p>}
           </div>
-          <p className={styles.mintAddress}>Connected account: ..{blockchain.account.slice(32)}</p>
-          <p className={styles.ownedSupply}>Number of escAPES you own: <span className={styles.quantityOwned}>{data.totalOwned}</span></p>
+          <p className={styles.mintAddress}>Connected account: <span className={styles.greenText}>..{blockchain.account.slice(32)}</span></p>
+          <p className={styles.ownedSupply}>Number of escAPES you own: <span className={`${styles.quantityOwned, styles.greenText}`}>{data.totalOwned}</span></p>
           <div className={styles.quantitySelectContainer}>
             <a href="#" onClick={() => {
               if (quantity > 1) {
@@ -217,7 +217,7 @@ export default function ConnectMetamask() {
             }} className={styles.minPlusButton}>+</a>
           </div>
           <p className={styles.mintTotalPrice}>Total Price: {(quantity * 0.5).toFixed(1)} ETH</p>
-          {data.totalOwned < 3 ? <a className={`${styles.connectMetamaskBtn}`} onClick={() => {
+          {/* {data.totalOwned < 3 ? <a className={`${styles.connectMetamaskBtn}`} onClick={() => {
             let num = 0;
             if (blockchain.btnOneSelected) {
               num = 1;
@@ -230,7 +230,7 @@ export default function ConnectMetamask() {
             }
             claimNFTs(num);
             dispatch(updatingAllBtnAction());
-          }}>MINT</a> : <p>You have reached the maximum<br/>number allowed to mint! (3 NFTs)</p>}
+          }}>MINT</a> : <p>You have reached the maximum<br/>number allowed to mint! (3 NFTs)</p>} */}
           <p className={styles.mintedSupply}>Minted escAPES: {data.totalSupply}/8000</p>
         </div>
       </div>
@@ -241,13 +241,13 @@ export default function ConnectMetamask() {
         <div className={styles.mintContainer}>
           <p className={styles.mintTitle}>PUBLIC MINT</p>
           {data.totalOwned < 1 && <p className={styles.mintSubtitle}>Get an escAPE now!</p>}
-          {data.totalOwned < 1 && <p className={styles.mintCondition}>You can only mint one while total minted<br/> escAPES are less than 500.</p>}
-          <p className={styles.mintAddress}>Connected account: ..{blockchain.account.slice(32)}</p>
-          <p className={styles.ownedSupply}>Number of escAPES you own: <span className={styles.quantityOwned}>{data.totalOwned}</span></p>
+          {data.totalOwned < 1 && <p className={styles.mintCondition}>You can only mint one for <span className={styles.textFree}>FREE</span> per wallet up to 577 NFTs.<br/>After the free mint finish, you can<br/>mint up to 5 NFTs per wallet for 0.025 ETH each.</p>}
+          <p className={styles.mintAddress}>Connected account: <span className={styles.greenText}>..{blockchain.account.slice(32)}</span></p>
+          <p className={styles.ownedSupply}>Number of escAPES you own: <span className={`${styles.quantityOwned, styles.greenText}`}>{data.totalOwned}</span></p>
           <p className={styles.mintTotalPrice}>Total Price: FREE (excluding gas fees)</p>
-          {data.totalOwned < 1 ? <a className={`${styles.connectMetamaskBtn}`} onClick={() => {
+          {/* {data.totalOwned < 1 ? <a className={`${styles.connectMetamaskBtn}`} onClick={() => {
             claimOneNft();
-          }}>MINT ONE</a> : <div><p>You have reached the maximum<br/>number allowed to mint for supply before 500! (1 NFT)</p><p style={{ marginTop: '10px' }}>Please come back when total minted NFTs reach 500.</p></div>}
+          }}>MINT ONE</a> : <div><p>You have reached the maximum<br/>number allowed to mint for supply before 500! (1 NFT)</p><p style={{ marginTop: '10px' }}>Please come back when total minted NFTs reach 500.</p></div>} */}
           <p className={styles.mintedSupply}>Minted escAPES: {data.totalSupply}/8000</p>
         </div>
       </div>
