@@ -102,8 +102,8 @@ export default function Home() {
             <div className={styles.mintInfoGifs}>
               <video className={styles.mintVideo} src='/videos/gif-4.mp4' autoPlay loop muted></video>
               <video className={styles.mintVideo} src='/videos/gif-5.mp4' autoPlay loop muted></video>
-              <video className={styles.mintVideo} src='/videos/gif-4.mp4' autoPlay loop muted></video>
-              <video className={styles.mintVideo} src='/videos/gif-5.mp4' autoPlay loop muted></video>
+              <video className={styles.mintVideo} src='/videos/gif-6.mp4' autoPlay loop muted></video>
+              <video className={styles.mintVideo} src='/videos/gif-7.mp4' autoPlay loop muted></video>
             </div>
           </div>
         </div>
