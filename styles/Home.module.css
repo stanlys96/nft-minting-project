@@ -979,12 +979,11 @@
   }
 
   .mintInfoGifs {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
-  .mintVideo:last-of-type,
-  .mintVideo:nth-child(3) {
-    display: none;
+  .mintVideo {
+    width: 200px;
   }
 }
 
