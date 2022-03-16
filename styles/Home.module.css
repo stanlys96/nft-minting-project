@@ -985,6 +985,10 @@
   .mintVideo {
     width: 200px;
   }
+
+  .mintInfoPage {
+    height: 120vh;
+  }
 }
 
 @media screen and (max-width: 1040px) and (min-width: 501px) {
@@ -998,6 +1002,10 @@
 
   .mintInfoGifs {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .mintInfoPage {
+    height: 140vh;
   }
 }
 
@@ -1131,10 +1139,6 @@
 
   #aboutPage {
     height: 130vh;
-  }
-
-  .mintInfoPage {
-    height: 120vh;
   }
 
   .mintVideo:first-of-type {
