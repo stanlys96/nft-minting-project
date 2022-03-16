@@ -12,7 +12,9 @@ export default function Navbar() {
   const router = useRouter();
   return (
     <div>
-      <video className="vid" src='/videos/trailer.mp4' autoPlay loop muted />
+      <video className="vid" autoPlay loop muted >
+        <source src="/videos/trailer.mp4" type="video/mp4" />
+      </video>
       <nav className={styles.navbar}>
         <div className={styles.insideNavbar}>
           <div className={styles.logoContainer}>

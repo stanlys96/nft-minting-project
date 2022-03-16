@@ -95,10 +95,13 @@ export default function Home() {
               <div className={styles.networkContainer}>
                 <p>Network: Ethereum</p>
                 <p>Date: tba</p>
-                <p>Price: free for the 1st 1000 nfts and 0.025 eth each for the rest</p>
+                <p>Contract: ERC721A</p>
+                <p>Price: free for the 1st 1000 nfts, max 1 per wallet<br/>0.025 eth each for the rest, max 5 per wallet</p>
               </div>
             </div>
             <div className={styles.mintInfoGifs}>
+              <video className={styles.mintVideo} src='/videos/gif-4.mp4' autoPlay loop muted></video>
+              <video className={styles.mintVideo} src='/videos/gif-5.mp4' autoPlay loop muted></video>
               <video className={styles.mintVideo} src='/videos/gif-4.mp4' autoPlay loop muted></video>
               <video className={styles.mintVideo} src='/videos/gif-5.mp4' autoPlay loop muted></video>
             </div>
