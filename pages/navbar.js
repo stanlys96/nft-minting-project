@@ -28,6 +28,12 @@ export default function Navbar() {
             <Link onClick={() => {
               router.push('/', undefined, { shallow: true });
               dispatch(resetAccount());
+            }} to="mint" smooth={true} spy={true}  href="/" className={styles.navlink}>
+            Mint
+            </Link>
+            <Link onClick={() => {
+              router.push('/', undefined, { shallow: true });
+              dispatch(resetAccount());
             }} to="about" smooth={true} spy={true} href="/" className={styles.navlink}>
               About
             </Link>

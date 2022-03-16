@@ -85,16 +85,18 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className={styles.mintInfoPage}>
+      <section className={`${styles.mintInfoPage} mint`}>
         <div className={styles.mintInfoContent}>
           <div className={styles.mintInfoAndBtn}>
             <a className={styles.discoverBtn} onClick={() => {
               router.push('/connect-metamask', undefined, { shallow: true });
             }}>MINT NOW</a>
-            <div className={styles.networkContainer}>
-              <p>Network: Ethereum</p>
-              <p>Date: tba</p>
-              <p>Price: free for the 1st 1000 nfts and 0.025 eth each for the rest</p>
+            <div className={styles.networkOuterLayer}>
+              <div className={styles.networkContainer}>
+                <p>Network: Ethereum</p>
+                <p>Date: tba</p>
+                <p>Price: free for the 1st 1000 nfts and 0.025 eth each for the rest</p>
+              </div>
             </div>
             <div className={styles.mintInfoGifs}>
               <video className={styles.mintVideo} src='/videos/gif-4.mp4' autoPlay loop muted></video>
