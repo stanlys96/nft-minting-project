@@ -49,7 +49,7 @@ let timelineElements = [
     title: "100% sold out",
     location: "South Warren, Geshington",
     description:
-      "It is time for celebration by “escape” the real world. We are going to make our NFT alive in the metaverse.",
+      "The great EscAPE from the tyranny of capitalism! Join our apes in their rebellion against the system and they will build a new colony together. Our apes would be traversing across several environments to get to their new haven. What's next for the EscAPEd? Join and build together with them.",
     buttonText: "Course Certificate",
     date: "September 2011",
     icon: "school",
@@ -61,7 +61,7 @@ export default function Home() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  let workIconStyles = { background: "#06D6A0" };
+  let workIconStyles = { background: "#06D6A0", display: "flex", justifyContent: "center", alignItems: "center" };
   let schoolIconStyles = { background: "#F9C74F" };
   return (
     <section>
@@ -85,6 +85,24 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className={styles.mintInfoPage}>
+        <div className={styles.mintInfoContent}>
+          <div className={styles.mintInfoAndBtn}>
+            <a className={styles.discoverBtn} onClick={() => {
+              router.push('/connect-metamask', undefined, { shallow: true });
+            }}>MINT NOW</a>
+            <div className={styles.networkContainer}>
+              <p>Network: Ethereum</p>
+              <p>Date: tba</p>
+              <p>Price: free for the 1st 1000 nfts and 0.025 eth each for the rest</p>
+            </div>
+            <div className={styles.mintInfoGifs}>
+              <video className={styles.mintVideo} src='/videos/gif-4.mp4' autoPlay loop muted></video>
+              <video className={styles.mintVideo} src='/videos/gif-5.mp4' autoPlay loop muted></video>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id={styles.aboutPage}>
         <div id="about" className={styles.aboutContainer}>
           <div className={styles.imgContainer}>
@@ -98,14 +116,6 @@ export default function Home() {
           <div className={styles.aboutCaptionContainer}>
             <div className={styles.captionLogoContainer}>
               <img className={styles.escapeImg} width={150} src="/images/logo-escape.jpg" alt="escape-logo" />
-              <a className={styles.discoverBtn} onClick={() => {
-                router.push('/connect-metamask', undefined, { shallow: true });
-              }}>MINT NOW</a>
-              <div className={styles.networkContainer}>
-                <p>Network: Ethereum</p>
-                <p>Date: tba</p>
-                <p>Price: free for the 1st 577 nfts and 0.025 eth each for the rest</p>
-              </div>  
             </div>
             <p className={styles.captionBlockchain}><span className={styles.insideCaption}>About Us</span></p>
             <p className={styles.captionDescription}>escAPE is a collection of 6577 2D animation Ape NFTs that is going to rock the metaverse in March 2022. It was designed by the talented Flatonic team who already well recognized in 2d animation world. Our purpose is to bring 2D animation and be the market leader in the NFT space for that category.<br/><br/> We are representing those individuals that need to “escape” whatever they want to run away from. So, this is definitely the perfect NFTs collection for PFP or even for your metaverse avatar. LFG people, we are escaping together to the Moon!!!</p>
@@ -125,7 +135,8 @@ export default function Home() {
                   // date={element.date}
                   // dateClassName="date"
                   iconStyle={workIconStyles}
-                  icon={<FontAwesomeIcon icon={faRocket}/>}
+                  icon={<img src="/images/monkey-6290-icon.png" className={styles.imgMonkey} />}
+                  contentStyle={{ background: "rgba(0, 0, 0, 0.5)", color: "#fff", boxShadow: "0 0 0 #000 !important" }}
                 >
                   <h3 className={`vertical-timeline-element-title ${styles.heading3}`}>{element.title}</h3>
                   <p id={styles.description}>{element.description}</p>

@@ -10,6 +10,10 @@
   overflow: hidden;
 }
 
+.imgMonkey {
+  width: 50px;
+}
+
 .textFree {
   font-weight: bold;
 }
@@ -32,9 +36,12 @@
 
 .networkContainer {
   font-weight: bold;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  background-image: linear-gradient(to right, #3A5165, #030303);
   border-radius: 20px;
+  color: #fff;
+  text-align: start;
+  line-height: 1.5;
 }
 
 .socMedIconContainer {
@@ -63,6 +70,39 @@
 
 .home {
   height: 80vh;
+}
+
+.mintInfoPage {
+  height: 100vh;
+  background-image: url('/images/bg-escape.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mintInfoContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.mintInfoAndBtn {
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mintVideo:first-of-type {
+  margin-right: 15px;
+}
+
+.mintVideo:last-of-type {
+  margin-left: 15px;
 }
 
 .navlinkContainer {
@@ -274,9 +314,6 @@
 }
 
 .discoverBtn {
-  position: absolute;
-  top: 40px;
-  left: 170px;
   display: inline-block;
   background-color: #000000;
   color: #fff;
@@ -285,6 +322,18 @@
   transition: all 0.5s ease-in-out;
   border: 2px solid #888;
   font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.mintInfoGifs {
+  display: flex;
+  margin-top: 20px;
+}
+
+.verticalElement {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  box-shadow: 0 !important;
 }
 
 .discoverBtn:hover {
@@ -377,7 +426,7 @@
 }
 
 .aboutContainer {
-  margin: 19px auto 0px;
+  margin: 0 auto;
   max-width: 1200px;
   display: flex;
   justify-content: space-between;
@@ -385,7 +434,8 @@
   line-height: 1.5;
 }
 
-.aboutVideo {
+.aboutVideo,
+.mintVideo {
   width: 250px;
   border: 2px solid #888;
   margin-bottom: 10px;
@@ -435,7 +485,7 @@
 }
 
 .insideCaption {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(to right, #3A5165, #030303);
   border-radius: 20px;
   padding: 10px;
 }
@@ -458,12 +508,13 @@
   color: #949494;
   padding: 20px 10px;
   font-size: 16px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(to right, #3A5165, #030303);
   border-radius: 20px;
+  margin-top: 15px;
 }
 
 #roadmap {
-  background-image: url('/images/BG4-01.png');
+  background-image: url('/images/BG3-01.png');
 }
 
 .roadmapTitle {
@@ -924,6 +975,18 @@
 
 }
 
+@media screen and (max-width: 500px) and (min-width: 0px) {
+  .networkContainer {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 1040px) and (min-width: 501px) {
+  .networkContainer {
+    font-size: 14px;
+  }
+}
+
 @media screen and (max-width: 1040px) and (min-width: 0px) {
   .logoName {
     display: none;
@@ -1054,12 +1117,24 @@
 
   #aboutPage {
     height: 130vh;
-    background-image: url('/images/BG3-01.png');
   }
 
-  .networkContainer {
-    margin-top: 10px;
-    font-size: 18px;
+  .mintInfoPage {
+    height: 120vh;
+  }
+
+  .mintInfoGifs {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+
+  .mintVideo:first-of-type {
+    margin: 0;
+  }
+
+  .mintVideo:last-of-type {
+    margin: 0;
   }
 
   .connectContainer,
@@ -1076,5 +1151,9 @@
   .connectMetamaskBtn {
     padding: 15px 50px;
     font-size: 15px;
+  }
+
+  .imgMonkey {
+    width: 30px
   }
 }
