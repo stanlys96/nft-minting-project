@@ -250,7 +250,7 @@
 }
 
 .connectWalletBtn {
-  display: none;
+  visibility: hidden;
   padding: 10px 20px;
   color: #fff;
   cursor: pointer;
@@ -307,7 +307,8 @@
 }
 
 .discoverBtn {
-  display: none;
+  visibility: hidden;
+  display: inline-block;
   background-color: #000000;
   color: #fff;
   padding: 20px 40px;
