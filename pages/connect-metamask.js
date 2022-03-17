@@ -125,7 +125,6 @@ export default function ConnectMetamask() {
   useEffect(() => {
     getData();
   }, [blockchain.account]);
-  console.log(data.totalSupply, " <<<<<");
   if (connectingWallet) {
     return (
       <div className={styles.connectMetamask}>
