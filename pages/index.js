@@ -95,9 +95,9 @@ export default function Home() {
             <div className={styles.networkOuterLayer}>
               <div className={styles.networkContainer}>
                 <p>Network: Ethereum</p>
-                <p>Date: tba</p>
+                <p>Date: TBA</p>
                 <p>Contract: ERC721A</p>
-                <p>Price: free for the 1st 1000 nfts, max 1 per wallet<br/>0.025 eth each for the rest, max 5 per wallet</p>
+                <p>Price: 1st 1000 NFTs = FREE (max 1 per wallet)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@0.025 ETH each (max 5 per wallet)</p>
               </div>
             </div>
             <div className={styles.mintInfoGifs}>
