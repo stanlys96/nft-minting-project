@@ -49,7 +49,7 @@ let timelineElements = [
     title: "100% sold out",
     location: "South Warren, Geshington",
     description:
-      "100% sold out – It is time for celebration by “escape” the real world. We are going to make our NFT alive in the metaverse.",
+      "It is time for celebration by “escape” the real world. We are going to make our NFT alive in the metaverse.",
       // "The great EscAPE from the tyranny of capitalism! Join our apes in their rebellion against the system and they will build a new colony together. Our apes would be traversing across several environments to get to their new haven. What's next for the EscAPEd? Join and build together with them.",
     buttonText: "Course Certificate",
     date: "September 2011",
