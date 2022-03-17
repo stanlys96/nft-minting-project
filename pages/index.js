@@ -49,7 +49,8 @@ let timelineElements = [
     title: "100% sold out",
     location: "South Warren, Geshington",
     description:
-      "The great EscAPE from the tyranny of capitalism! Join our apes in their rebellion against the system and they will build a new colony together. Our apes would be traversing across several environments to get to their new haven. What's next for the EscAPEd? Join and build together with them.",
+      "100% sold out – It is time for celebration by “escape” the real world. We are going to make our NFT alive in the metaverse.",
+      // "The great EscAPE from the tyranny of capitalism! Join our apes in their rebellion against the system and they will build a new colony together. Our apes would be traversing across several environments to get to their new haven. What's next for the EscAPEd? Join and build together with them.",
     buttonText: "Course Certificate",
     date: "September 2011",
     icon: "school",
@@ -123,7 +124,9 @@ export default function Home() {
               <img className={styles.escapeImg} width={150} src="/images/logo-escape.jpg" alt="escape-logo" />
             </div>
             <p className={styles.captionBlockchain}><span className={styles.insideCaption}>About Us</span></p>
-            <p className={styles.captionDescription}>escAPE is a collection of 6577 2D animation Ape NFTs that is going to rock the metaverse in March 2022. It was designed by the talented Flatonic team who already well recognized in 2d animation world. Our purpose is to bring 2D animation and be the market leader in the NFT space for that category.<br/><br/> We are representing those individuals that need to “escape” whatever they want to run away from. So, this is definitely the perfect NFTs collection for PFP or even for your metaverse avatar. LFG people, we are escaping together to the Moon!!!</p>
+            <p className={styles.captionDescription}>escAPE is a collection of 6577 2D animation Ape NFTs that is going to rock the metaverse in March 2022. It was designed by the talented Flatonic team who already well recognized in 2d animation world. Our purpose is to bring 2D animation and be the market leader in the NFT space for that category.<br/><br/> We are representing those individuals that need to “escape” whatever they want to run away from. So, this is definitely the perfect NFTs collection for PFP or even for your metaverse avatar. The great EscAPE from the tyranny of capitalism! Join our apes in their rebellion against the system and they will build a new colony together. Our apes would be traversing across several environments to get to their new haven. What's next for the EscAPEd? Join and build together with them.
+            {/* LFG people, we are escaping together to the Moon!!! */}
+            </p>
           </div>
         </div>
       </section>
