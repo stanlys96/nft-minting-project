@@ -234,7 +234,7 @@ export default function ConnectMetamask() {
         </div>
       </div>
     );
-  } else if (blockchain.account != null && data.totalSupply < 3) {
+  } else if (blockchain.account != null && data.totalSupply < 1000) {
     return (
       <div className={styles.connectMetamaskLayer}>
         <div className={styles.connectMetamask}>
