@@ -800,6 +800,10 @@
   font-weight: bold;
 }
 
+.priceFree {
+  display: flex;
+}
+
 .quantitySelectContainer {
   display: flex;
   justify-content: center;
