@@ -107,7 +107,7 @@ export default function ConnectMetamask() {
         dispatch(fetchData(blockchain.account));
         Swal.fire({
           title: 'Success!',
-          text: 'You have successfully minted one escAPE! Congratulations!',
+          text: 'You have successfully minted one escAPE! Congratulations! Go visit opensea.io to view it.',
           icon: 'success',
           confirmButtonText: 'Cool'
         })
