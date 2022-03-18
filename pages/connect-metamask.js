@@ -93,7 +93,6 @@ export default function ConnectMetamask() {
         gasLimit: "285000",
         to: "0x1c5B16a273f65BfB580087f5250B03D64d83218F",
         from: blockchain.account,
-        // value: blockchain.web3.utils.toWei((0.1 * _amount).toString(), "ether"),
       })
       .once("error", (err) => {
         console.log(err);
