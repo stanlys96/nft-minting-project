@@ -1156,7 +1156,16 @@
     font-size: 15px;
   }
 
-  .connectMetamask {
+  .mintTitle {
+    font-size: 22px;
+    margin: 0;
+  }
+
+  .mintSubtitle {
+    font-size: 15px;
+  }
+
+  .mintCondition {
     font-size: 15px;
   }
 
