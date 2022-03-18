@@ -250,7 +250,6 @@
 }
 
 .connectWalletBtn {
-  display: none;
   padding: 10px 20px;
   color: #fff;
   cursor: pointer;
@@ -268,6 +267,7 @@
 }
 
 .headerCaption {
+  visibility: hidden;
   max-width: 1200px;
   margin: 0 auto;
   color: #fff;
@@ -278,7 +278,6 @@
 }
 
 .caption {
-  visibility: hidden;
   font-size: 45px;
   font-weight: bold;
 }
@@ -289,7 +288,6 @@
 }
 
 .secondCaptionContainer {
-  visibility: hidden;
   margin: 30px 0;
   text-align: center;
 }
@@ -307,7 +305,6 @@
 }
 
 .discoverBtn {
-  display: none;
   background-color: #000000;
   color: #fff;
   padding: 20px 40px;
@@ -340,7 +337,6 @@
   max-width: 1200px;
   display: flex;
   justify-content: space-between;
-  visibility: hidden;
 }
 
 @media (max-width: 600px) {
@@ -437,12 +433,12 @@
 }
 
 .imgContainer {
+  display: none;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   color: #fff;
-  visibility: hidden;
 }
 
 .imgContainer img {
@@ -793,7 +789,6 @@
 }
 
 .connectMetamaskBtn {
-  visibility: hidden;
   padding: 15px 50px;
   border-radius: 40px;
   background-color: #FED9B0;
@@ -1013,7 +1008,6 @@
 
 @media screen and (max-width: 1040px) and (min-width: 0px) {
   .logoName {
-    display: none;
   }
 
   .insideNavbar {
@@ -1051,12 +1045,10 @@
   }
 
   .navbar .connectWalletBtn {
-    display: none;
   }
 
   .navbarImg {
     /* visibility: hidden; */
-    display: none;
     width: 0;
     height: 0;
   }
@@ -1134,7 +1126,6 @@
   .discoverBtn {
     position: static;
     /* display: inline-block; */
-    display: none;
     padding: 10px 20px;
     font-size: 20px;
     margin-top: 20px;

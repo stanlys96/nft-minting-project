@@ -240,13 +240,13 @@ export default function ConnectMetamask() {
         <div className={styles.mintContainer}>
           <p className={styles.mintTitle}>PUBLIC MINT</p>
           {data.totalOwned < 1 && <p className={styles.mintSubtitle}>Get an escAPE now!</p>}
-          {data.totalOwned < 1 && <p className={styles.mintCondition}>You can only mint one for <span className={styles.textFree}>FREE</span> per wallet up to 577 NFTs.<br/>After the free mint finish, you can<br/>mint up to 5 NFTs per wallet for 0.025 ETH each.</p>}
+          {data.totalOwned < 1 && <p className={styles.mintCondition}>You can only mint one for <span className={styles.textFree}>FREE</span> per wallet up to 1000 NFTs.<br/>After the free mint finish, you can<br/>mint up to 5 NFTs per wallet for 0.025 ETH each.</p>}
           <p className={styles.mintAddress}>Connected account: <span className={styles.greenText}>..{blockchain.account.slice(32)}</span></p>
           <p className={styles.ownedSupply}>Number of escAPES you own: <span className={`${styles.quantityOwned, styles.greenText}`}>{data.totalOwned}</span></p>
           <p className={styles.mintTotalPrice}>Total Price: FREE (excluding gas fees)</p>
-          {/* {data.totalOwned < 1 ? <a className={`${styles.connectMetamaskBtn}`} onClick={() => {
+          {data.totalOwned < 1 ? <a className={`${styles.connectMetamaskBtn}`} onClick={() => {
             claimOneNft();
-          }}>MINT ONE</a> : <div><p>You have reached the maximum<br/>number allowed to mint for supply before 500! (1 NFT)</p><p style={{ marginTop: '10px' }}>Please come back when total minted NFTs reach 500.</p></div>} */}
+          }}>MINT ONE</a> : <div><p>You have reached the maximum<br/>number allowed to mint for supply before 500! (1 NFT)</p><p style={{ marginTop: '10px' }}>Please come back when total minted NFTs reach 500.</p></div>}
           <p className={styles.mintedSupply}>Minted escAPES: {data.totalSupply}/8000</p>
         </div>
       </div>
