@@ -54,7 +54,7 @@ export default function ConnectMetamask() {
         gasLimit: "285000",
         to: "0x1c5B16a273f65BfB580087f5250B03D64d83218F",
         from: blockchain.account,
-        value: blockchain.web3.utils.toWei((0.1 * _amount).toString(), "ether"),
+        value: blockchain.web3.utils.toWei((0.025 * _amount).toString(), "ether"),
       })
       .once("error", (err) => {
         console.log(err);
@@ -215,7 +215,7 @@ export default function ConnectMetamask() {
               } 
             }} className={styles.minPlusButton}>+</a>
           </div>
-          <p className={styles.mintTotalPrice}>Total Price: {(quantity * 0.5).toFixed(1)} ETH</p>
+          <p className={styles.mintTotalPrice}>Total Price: {(quantity * 0.025).toFixed(3)} ETH</p>
           {/* {data.totalOwned < 3 ? <a className={`${styles.connectMetamaskBtn}`} onClick={() => {
             let num = 0;
             if (blockchain.btnOneSelected) {
@@ -230,7 +230,7 @@ export default function ConnectMetamask() {
             claimNFTs(num);
             dispatch(updatingAllBtnAction());
           }}>MINT</a> : <p>You have reached the maximum<br/>number allowed to mint! (3 NFTs)</p>} */}
-          <p className={styles.mintedSupply}>Minted escAPES: {data.totalSupply}/8000</p>
+          <p className={styles.mintedSupply}>Minted escAPES: {data.totalSupply}/6577</p>
         </div>
       </div>
     );
@@ -246,8 +246,8 @@ export default function ConnectMetamask() {
           <p className={styles.mintTotalPrice}>Total Price: FREE (excluding gas fees)</p>
           {data.totalOwned < 1 ? <a className={`${styles.connectMetamaskBtn}`} onClick={() => {
             claimOneNft();
-          }}>MINT ONE</a> : <div><p>You have reached the maximum<br/>number allowed to mint for supply before 500! (1 NFT)</p><p style={{ marginTop: '10px' }}>Please come back when total minted NFTs reach 500.</p></div>}
-          <p className={styles.mintedSupply}>Minted escAPES: {data.totalSupply}/8000</p>
+          }}>MINT ONE</a> : <div><p>You have reached the maximum<br/>number allowed to mint for supply before 1000! (1 NFT)</p><p style={{ marginTop: '10px' }}>Please come back when total minted NFTs reach 1000.</p></div>}
+          <p className={styles.mintedSupply}>Minted escAPES: {data.totalSupply}/6577</p>
         </div>
       </div>
     );
