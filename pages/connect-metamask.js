@@ -191,7 +191,7 @@ export default function ConnectMetamask() {
       </div>
     </div>
   );
-  } else if (blockchain.account != null && data.totalSupply > 2) {
+  } else if (blockchain.account != null && data.totalSupply >= 1000) {
     return (
       <div className={styles.connectMetamask}>
         <div className={styles.mintContainer}>
