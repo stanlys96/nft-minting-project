@@ -81,7 +81,10 @@ export default function Home() {
             <span></span>
             <span></span>
             <div className={styles.videoBox}>
-              <video src='/videos/video-3.mp4' autoPlay loop muted />
+              <video autoPlay loop muted>
+                <source src='/videos/video-3.mp4' type="video/mp4"></source>
+                Your browser does not support mp4 videos, please change browser!
+              </video>
             </div>
           </div>
         </div>
@@ -103,10 +106,22 @@ export default function Home() {
               </div>
             </div>
             <div className={styles.mintInfoGifs}>
-              <video className={styles.mintVideo} src='/videos/gif-4.mp4' autoPlay loop muted></video>
-              <video className={styles.mintVideo} src='/videos/gif-5.mp4' autoPlay loop muted></video>
-              <video className={styles.mintVideo} src='/videos/gif-6.mp4' autoPlay loop muted></video>
-              <video className={styles.mintVideo} src='/videos/gif-7.mp4' autoPlay loop muted></video>
+              <video className={styles.mintVideo} autoPlay loop muted>
+                <source src='/videos/gif-4.mp4' type='video/mp4'></source>
+                Your browser does not support mp4 videos, please change browser!
+              </video>
+              <video className={styles.mintVideo} autoPlay loop muted>
+                <source src='/videos/gif-5.mp4' type='video/mp4'></source>
+                Your browser does not support mp4 videos, please change browser!
+              </video>
+              <video className={styles.mintVideo} autoPlay loop muted>
+                <source src='/videos/gif-6.mp4' type='video/mp4'></source>
+                Your browser does not support mp4 videos, please change browser!
+              </video>
+              <video className={styles.mintVideo} autoPlay loop muted>
+                <source src='/videos/gif-7.mp4' type='video/mp4'></source>
+                Your browser does not support mp4 videos, please change browser!
+              </video>
             </div>
           </div>
         </div>
@@ -165,7 +180,10 @@ export default function Home() {
             <div className={styles.teamImages}>
               <div className={styles.teamImageCard}>
                 <div className={styles.teamVideoContainer}>
-                  <video className={styles.teamVideo} src='/videos/gif-3.mp4' autoPlay loop muted />
+                  <video className={styles.teamVideo} autoPlay loop muted>
+                    <source src="/videos/gif-3.mp4" type='video/mp4'></source>
+                    Your browser does not support mp4 videos, please change browser!
+                  </video>
                   <div className={styles.teamInnerBox}>
                     <div className={styles.teamNestedInnerBox}>
                       <p className={styles.memberName}>Romero</p>
@@ -177,7 +195,10 @@ export default function Home() {
               </div>
              <div className={styles.teamImageCard}>
                 <div className={styles.teamVideoContainer}>
-                  <video className={styles.teamVideo} src='/videos/gif-1.mp4' autoPlay loop muted />
+                  <video className={styles.teamVideo} autoPlay loop muted>
+                    <source src="/videos/gif-1.mp4" type='video/mp4'></source>
+                    Your browser does not support mp4 videos, please change browser!
+                  </video>
                   <div className={styles.teamInnerBox}>
                     <div className={styles.teamNestedInnerBox}>
                       <p className={styles.memberName}>Flatonic</p>
@@ -189,7 +210,10 @@ export default function Home() {
               </div>
              <div className={styles.teamImageCard}>
                 <div className={styles.teamVideoContainer}>
-                  <video className={styles.teamVideo} src='/videos/gif-2.mp4' autoPlay loop muted />
+                  <video className={styles.teamVideo} autoPlay loop muted>
+                    <source src="/videos/gif-2.mp4" type='video/mp4'></source>
+                    Your browser does not support mp4 videos, please change browser!
+                  </video>
                   <div className={styles.teamInnerBox}>
                     <div className={styles.teamNestedInnerBox}>
                       <p className={styles.memberName}>Zeriis</p>
