@@ -118,6 +118,7 @@ export default function Navbar() {
         left: 0;
         height: 90vh;
         background: transparent;
+        display: none;
       }
 
       .navlinkInsideBurger {
