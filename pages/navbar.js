@@ -29,14 +29,15 @@ export default function Navbar() {
         position: fixed;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 10px 30px;
         background: rgba(0, 0, 0, 0.85);
-        height: 13vh;
         z-index: 10;
+        height: 10vh;
       }
 
       .escapeNavbar {
-        width: 80px;
+        width: 60px;
       }
 
       .menuBtn {
@@ -44,16 +45,16 @@ export default function Navbar() {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 80px;
-        height: 80px;
+        width: 40px;
+        height: 40px;
         cursor: pointer;
         transition: all .5s ease-in-out;
         border: 3px solid #fff;
       }
 
       .menuBtnBurger {
-        width: 50px;
-        height: 6px;
+        width: 20px;
+        height: 4px;
         background: #fff;
         border-radius: 5px;
         box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
@@ -64,8 +65,8 @@ export default function Navbar() {
       .menuBtnBurger::after {
         content: '';
         position: absolute;
-        width: 50px;
-        height: 6px;
+        width: 20px;
+        height: 4px;
         background: #fff;
         border-radius: 5px;
         box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
@@ -73,11 +74,11 @@ export default function Navbar() {
       }
 
       .menuBtnBurger::before {
-        transform: translateY(-16px);
+        transform: translateY(-8px);
       }
 
       .menuBtnBurger::after {
-        transform: translateY(16px);
+        transform: translateY(8px);
       }
 
       /* ANIMATION */
@@ -99,9 +100,9 @@ export default function Navbar() {
         z-index: 10;
         width: 100%;
         position: fixed;
-        top: 13vh;
+        top: 10vh;
         left: 0;
-        height: 87vh;
+        height: 90vh;
         background: rgba(0, 0, 0, 0.85);
         display: flex;
         flex-direction: column;
@@ -113,9 +114,9 @@ export default function Navbar() {
         z-index: 10;
         width: 100%;
         position: fixed;
-        top: 13vh;
+        top: 10vh;
         left: 0;
-        height: 87vh;
+        height: 90vh;
         background: transparent;
       }
 
