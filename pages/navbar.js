@@ -34,6 +34,7 @@ export default function Navbar() {
         background: rgba(0, 0, 0, 0.85);
         z-index: 10;
         height: 10vh;
+        margin: 0 auto;
       }
 
       .escapeNavbar {
@@ -108,6 +109,8 @@ export default function Navbar() {
         flex-direction: column;
         align-items: center;
         transition: all .5s ease-in-out;
+        margin: 0 auto;
+        text-align: center;
       }
 
       .outsideBurger {
@@ -129,7 +132,7 @@ export default function Navbar() {
         transition: all 0.5s ease-in-out;
         border-bottom: 1px solid transparent;
         display: inline-block;
-        margin: 20px 15px;
+        margin: 20px 0;
         text-align: center;
       }
 
@@ -139,11 +142,15 @@ export default function Navbar() {
       }
 
       .navlinkInsideBurger {
-        margin-right: 60px;
+        display: inline-block;
+        margin-right: 0;
       }
 
       .socialMediaInsideBurger {
         margin: 40px auto 0;
+        text-align: center;
+        display: flex;
+        justify-content: center;
       }
 
       .connectWalletInsideBurgerLayer {
@@ -153,7 +160,7 @@ export default function Navbar() {
 
       .connectWalletBtnInsideBurger {
         margin-top: 70px;
-        margin-right: 40px;
+        margin-right: 0;
         display: inline-block;
         padding: 30px 40px;
         color: #fff;
@@ -265,7 +272,7 @@ export default function Navbar() {
         </Link>
         <div className="socialMediaInsideBurger">
           <a target="_blank" rel="noreferrer" href="https://opensea.io/collection/escape-official"><img width={30} style={{ marginRight: "10px" }} src="/images/opensea.png" alt="opensea-logo" /></a>
-          <a target="_blank" rel="noreferrer" href="https://twitter.com/Eapeofficialnft"><img width={30} style={{ marginLeft: "10px", marginRight: "40px", borderRadius: "50%" }} src="/images/twit-icon.png" alt="opensea-logo" /></a>
+          <a target="_blank" rel="noreferrer" href="https://twitter.com/Eapeofficialnft"><img width={30} style={{ marginLeft: "10px", borderRadius: "50%" }} src="/images/twit-icon.png" alt="opensea-logo" /></a>
         </div>
         <div className="connectWalletInsideBurgerLayer">
           <Link onClick={() => {
