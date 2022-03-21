@@ -106,6 +106,7 @@ export default function Navbar() {
         background: rgba(0, 0, 0, 0.85);
         display: flex;
         flex-direction: column;
+        align-items: center;
         transition: all .5s ease-in-out;
       }
 
@@ -134,6 +135,7 @@ export default function Navbar() {
 
       .navlinkInsideBurger:hover {
         color: #0AC593;
+        border-bottom: 1px solid #0AC593;
       }
 
       .navlinkInsideBurger {
